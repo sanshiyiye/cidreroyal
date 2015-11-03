@@ -1,0 +1,28 @@
+/Users/rayjoy/gaojun/webstrom/JFrame/app/lib/schedule.js:19
+    test.init();、
+                ^
+SyntaxError: Unexpected token ILLEGAL
+    at exports.runInThisContext (vm.js:73:16)
+    at Module._compile (module.js:443:25)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.<anonymous> (/Users/rayjoy/gaojun/git/nvm/versions/node/v0.12.7/lib/node_modules/pm2/node_modules/pmx/lib/transaction.js:62:21)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/rayjoy/gaojun/webstrom/JFrame/app/core/JFrame.js:14:16)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.<anonymous> (/Users/rayjoy/gaojun/git/nvm/versions/node/v0.12.7/lib/node_modules/pm2/node_modules/pmx/lib/transaction.js:62:21)
+    at Module.require (module.js:365:17)
+    at require (module.js:384:17)
+    at Object.<anonymous> (/Users/rayjoy/gaojun/webstrom/JFrame/app.js:14:13)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.<anonymous> (/Users/rayjoy/gaojun/git/nvm/versions/node/v0.12.7/lib/node_modules/pm2/node_modules/pmx/lib/transaction.js:62:21)
+2015-10-29 17:27 +08:00: IPC channel with master closed
+2015-10-29 17:27 +08:00: IPC channel with master closed

@@ -1,0 +1,442 @@
+2015-10-29 16:26 +08:00: init normal schedule job on worker -> id is 1
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:26 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:27 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:28 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:29 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:30 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: schedule job , every 5 second!
+2015-10-29 16:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:34 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:34 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:34 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:34 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:34 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:34 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:34 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:34 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:36 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:36 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:36 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:36 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:36 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:36 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:36 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:36 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:38 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:38 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:39 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:39 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:40 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:40 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:40 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:40 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:40 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:40 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:40 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:40 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:41 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:41 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:41 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:41 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:41 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:41 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:41 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:41 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:45 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:45 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 16:48 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 16:48 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:26 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:26 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:27 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:27 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:31 +08:00: NaN
+2015-10-29 17:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:31 +08:00: NaN
+2015-10-29 17:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:31 +08:00: NaN
+2015-10-29 17:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:31 +08:00: NaN
+2015-10-29 17:31 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:31 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: NaN
+2015-10-29 17:32 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:32 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:33 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:33 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:33 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: NaN
+2015-10-29 17:33 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:33 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: NaN
+2015-10-29 17:35 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:35 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:44 +08:00: 0
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: NaN
+2015-10-29 17:44 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:44 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:46 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:46 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:46 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: NaN
+2015-10-29 17:46 +08:00: Executing (default): CREATE TABLE IF NOT EXISTS `userinfo` (`uid` BIGINT(20) NOT NULL UNIQUE , `nickname` VARCHAR(20) NOT NULL DEFAULT '', `img` VARCHAR(30) DEFAULT '', `level` INTEGER DEFAULT 1, `updatetime` BIGINT(13) DEFAULT 0, PRIMARY KEY (`uid`)) ENGINE=InnoDB;
+2015-10-29 17:46 +08:00: Executing (default): SHOW INDEX FROM `userinfo`
