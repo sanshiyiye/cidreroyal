@@ -2,23 +2,25 @@
 
 var express = require('express');
 
-var app = express();
+global.app = express();
 
 // 部分公共函数库
 global._ = require('lodash');
+global.Q = require('q');
 
 // 基础配置参数加载
 global.config = require('./config/config');
 
 // 中间件加载
-require(config.serverRoot + '/lib/express')(app, config);
+require(config.serverRoot + '/service/express')(app);
 
 // JFrame 初始化
 global.JF = require(config.serverRoot + '/core/JFrame');
+JF.init();
 //console.log(JF);
 
 // 路由模块加载
-require(config.serverRoot + '/lib/routes')(app);
+require(config.serverRoot + '/service/routes')(app);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

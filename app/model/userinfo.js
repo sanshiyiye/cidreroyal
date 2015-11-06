@@ -1,5 +1,6 @@
 /**
- * Created by gaojun on 15/10/26.
+ * UserInfo.js
+ * Created by auto tool.
  */
 
 'use strict';
@@ -8,52 +9,114 @@ var Sequelize = require('sequelize');
 
 function db_init(sequelize) {
   // 用户信息表
-  var userinfo = sequelize.define('userinfo', {
-    uid: {
-      type: Sequelize.BIGINT(20),
-      allowNull: false,
-      unique: true,
-      primaryKey: true,
-      field: "uid",
-      comment: "玩家唯一ID"
-    },
-
-    nickname: {
-      type: Sequelize.STRING(20),
-      allowNull: false,
-      defaultValue: "",
-      field: "nickname",
-      comment: "玩家昵称"
-    },
-
-    img: {
-      type: Sequelize.STRING(30),
-      defaultValue: "",
-      comment: "玩家头像"
-    },
-
-    level: {
-      type: Sequelize.INTEGER,
-      defaultValue: 1,
-      comment: "玩家等级"
-    },
-
-    updatetime: {
-      type: Sequelize.BIGINT(13),
-      defaultValue: 0,
-      comment: "最后更新时间"
-    },
-
+  var UserInfo = sequelize.define('userinfo', {
+    
+      uid: {
+        type: Sequelize.BIGINT(20),
+        allowNull: false,
+        unique: true,
+        field: "uid",
+        
+        comment: "唯一ID",
+        primaryKey: true,
+        autoIncrement: true,
+      },
+    
+      username: {
+        type: Sequelize.STRING(40),
+        allowNull: false,
+        unique: true,
+        field: "username",
+        defaultValue: "",
+        comment: "用户名",
+        
+      },
+    
+      email: {
+        type: Sequelize.STRING(40),
+        allowNull: false,
+        unique: true,
+        field: "email",
+        defaultValue: "",
+        comment: "邮箱",
+        
+      },
+    
+      telephone: {
+        type: Sequelize.STRING(15),
+        allowNull: false,
+        unique: true,
+        field: "telephone",
+        defaultValue: "0",
+        comment: "手机号",
+        
+      },
+    
+      password: {
+        type: Sequelize.STRING(50),
+        allowNull: false,
+        unique: false,
+        field: "password",
+        defaultValue: "",
+        comment: "密码",
+        
+      },
+    
+      nickname: {
+        type: Sequelize.STRING(20),
+        allowNull: true,
+        unique: false,
+        field: "nickname",
+        defaultValue: "",
+        comment: "昵称",
+        
+      },
+    
+      img: {
+        type: Sequelize.STRING(30),
+        allowNull: true,
+        unique: false,
+        field: "img",
+        defaultValue: "",
+        comment: "头像",
+        
+      },
+    
+      state: {
+        type: Sequelize.INTEGER(30),
+        allowNull: true,
+        unique: false,
+        field: "state",
+        defaultValue: 0,
+        comment: "状态(0未激活,1已激活)",
+        
+      },
+    
   }, {
     freezeTableName: true,
-    timestamps: false
+    timestamps: true,
+    indexes: [
+      {
+        unique: true,
+        fields: ['username','password',]
+      },
+      {
+        unique: true,
+        fields: ['email','password',]
+      },
+      {
+        unique: true,
+        fields: ['telephone','password',]
+      },
+      
+    ],
   });
 
-  userinfo.sync();
+  UserInfo.sync();
 
-  return userinfo;
+  return UserInfo;
 }
 
-module.exports = function (sequelize) {
+exports.UserInfo = function (sequelize) {
   return db_init(sequelize);
 };

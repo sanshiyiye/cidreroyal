@@ -13,7 +13,9 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 
-module.exports = function (app, config) {
+module.exports = function (app) {
+  app.set('env', config.environment);
+
   // view engine setup
   app.set('view engine', 'ejs');
   app.set('views', config.serverRoot + '/views');

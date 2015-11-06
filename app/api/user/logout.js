@@ -6,7 +6,7 @@
 
 // 登出请求
 module.exports = function (reqData) {
-  var msg = new JF.message.UserLoginMessage();
+  var msg = new JF.msg.UserLoginMessage();
   msg.init(reqData);
 
 

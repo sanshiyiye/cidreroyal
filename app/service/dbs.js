@@ -1,11 +1,14 @@
 /**
- * Created by gaojun on 15/10/26.
+ * 数据库模块service类
+ * Created by auto tool.
  */
 
 'use strict';
 
 var Sequelize = require('sequelize');
 var Redis = require('ioredis');
+
+var userinfo = require(config.serverRoot + "/model/UserInfo")
 
 // mysql 连接
 function loadMysql() {
@@ -36,4 +39,4 @@ var sequelize = loadMysql();
 exports.sequelize = sequelize;
 
 // model映射
-exports.db_userinfo = require(config.serverRoot + "/model/userinfo")(sequelize);
+exports.UserInfo = userinfo.UserInfo(sequelize);
