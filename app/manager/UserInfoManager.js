@@ -49,7 +49,7 @@ var UserInfoManager = function () {
     var username = userRegisterMsg.username;
 
     // 消息返回
-    var backMsg = new JF.msg.UserRegisterBackMessage();
+    var backMsg = new JF.msg.UserRegisterBackMsg();
 
     // 数据检验
     var check = function () {
@@ -150,7 +150,7 @@ var UserInfoManager = function () {
     var token = userRegConfirmMsg.token;
 
     // 消息返回
-    var backMsg = new JF.msg.UserRegisterBackMessage();
+    var backMsg = new JF.msg.UserRegconfirmBackMsg();
 
     // 根据id获取数据
     var getData = function () {

@@ -8,7 +8,7 @@
  * 注册请求
  */
 module.exports = function (reqData, res) {
-  var msg = new JF.msg.UserRegisterMessage(reqData);
+  var msg = new JF.msg.UserRegisterMsg(reqData);
 
   JF.ma.UserInfoManager.registerUser(msg, res);
   //// 用户注册

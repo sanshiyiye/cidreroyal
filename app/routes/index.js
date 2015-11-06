@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var register = require(config.serverRoot + '/api/user/register');
-var regconfirm = require(config.serverRoot + '/api/user/regconfirm');
-var login = require(config.serverRoot + '/api/user/login');
-var logout = require(config.serverRoot + '/api/user/logout');
+var register = require(config.serverRoot + '/api/user/Register');
+var regconfirm = require(config.serverRoot + '/api/user/Regconfirm');
+var login = require(config.serverRoot + '/api/user/Login');
+var logout = require(config.serverRoot + '/api/user/Logout');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
