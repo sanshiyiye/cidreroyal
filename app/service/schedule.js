@@ -8,6 +8,7 @@ var schedule = require('node-schedule');
 var cluster = require('cluster');
 
 var TestJob = require(config.serverRoot + '/job/TestJob');
+var ZeroClockJob = require(config.serverRoot + '/job/ZeroClockJob');
 
 // 启动时需要启动的定时器
 function init() {
@@ -31,6 +32,10 @@ function startJobs(){
   // TestJob
   var testJob = new TestJob();
   testJob.init();
+
+  // 0点任务
+  var zeroClockJob = new ZeroClockJob();
+  zeroClockJob.init();
 }
 
 // 启动

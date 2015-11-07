@@ -174,7 +174,7 @@ var UserInfoManager = function () {
       }
       // 用户不存在
       else {
-        throw new Error(JF.enums.ret.USER_USER_NO_EXIST);
+        throw new Error(JF.enums.ret.USER_NO_EXIST);
       }
     };
 

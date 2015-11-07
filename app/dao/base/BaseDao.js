@@ -34,12 +34,14 @@ BaseDao.prototype.get = function (id) {
     // 无数据，从数据库获取
     else{
       var cacheToRedis = function (data) {
-        var d = data.dataValues;
-        var jsonStr = JSON.stringify(d);
+        if(!_.isUndefined(data) && !_.isNull(data)) {
+          var d = data.dataValues;
+          var jsonStr = JSON.stringify(d);
 
-        // 缓存到redis
-        JF.dbs.redis.hset(tableName, id, jsonStr);
-        JF.dbs.redis.expire(tableName, config.RD_data_expire);
+          // 缓存到redis
+          JF.dbs.redis.hset(tableName, id, jsonStr);
+          JF.dbs.redis.expire(tableName, config.RD_data_expire);
+        }
 
         // 返回新的promise
         deferred.resolve(data);

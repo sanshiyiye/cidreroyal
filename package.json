@@ -17,6 +17,7 @@
     "generic-pool": "^2.2.0",
     "ioredis": "^1.10.0",
     "lodash": "^3.10.1",
+    "log4js": "^0.6.27",
     "morgan": "~1.6.1",
     "mysql": "^2.9.0",
     "node-schedule": "^0.2.9",
