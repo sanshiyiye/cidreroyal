@@ -15,11 +15,11 @@ module.exports = function (data){
     this.img = data.img || '';
     this.state = data.state || 0;
     
-  };
+  }
 
   this.setMsgtype = function(msgType){
     this.msgType = msgType;
-  }
+  };
 
   
   this.setUsername = function(username){

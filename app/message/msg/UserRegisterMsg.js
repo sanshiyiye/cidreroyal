@@ -12,11 +12,11 @@ module.exports = function (data){
     this.password = data.password || '';
     this.password2 = data.password2 || '';
     
-  };
+  }
 
   this.setMsgtype = function(msgType){
     this.msgType = msgType;
-  }
+  };
 
   
   this.setUsername = function(username){
