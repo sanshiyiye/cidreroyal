@@ -5,13 +5,18 @@
 
 'use strict';
 
-module.exports = function (){
-  this.init = function(data){
+module.exports = function (data){
+  if(!_.isUndefined(data) && !_.isNull(data)){
+    this.msgType = data.msgType || 0;
     this.username = data.username || '';
     this.password = data.password || '';
     this.password2 = data.password2 || '';
     
   };
+
+  this.setMsgtype = function(msgType){
+    this.msgType = msgType;
+  }
 
   
   this.setUsername = function(username){

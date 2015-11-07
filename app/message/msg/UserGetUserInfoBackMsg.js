@@ -5,8 +5,9 @@
 
 'use strict';
 
-module.exports = function (){
-  this.init = function(data){
+module.exports = function (data){
+  if(!_.isUndefined(data) && !_.isNull(data)){
+    this.msgType = data.msgType || 0;
     this.username = data.username || '';
     this.email = data.email || '';
     this.telephone = data.telephone || 0;
@@ -15,6 +16,10 @@ module.exports = function (){
     this.state = data.state || 0;
     
   };
+
+  this.setMsgtype = function(msgType){
+    this.msgType = msgType;
+  }
 
   
   this.setUsername = function(username){
