@@ -30,8 +30,8 @@ function init() {
 
 function startJobs(){
   // TestJob
-  var testJob = new TestJob();
-  testJob.init();
+  //var testJob = new TestJob();
+  //testJob.init();
 
   // 0点任务
   var zeroClockJob = new ZeroClockJob();

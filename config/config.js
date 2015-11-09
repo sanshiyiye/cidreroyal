@@ -41,7 +41,7 @@ module.exports = {
   mail_host: 'smtp.163.com',
   mail_port: 25,
   mail_user: 'rajay2015@163.com',
-  mail_pwd: 'test2015',
+  mail_pwd: 'cpdhtpjfxmnybrfg',
 
   mail_mailgun_key: 'key-74f6bc9717c2f67e0cce4b5e76d5dd86',
   mail_mailgun_domain: 'sandboxc47a484f71974546a51755d42e70ecbf.mailgun.org',

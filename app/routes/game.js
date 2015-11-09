@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
     var src = msgTypeDic[msgType];
 
     // 加载logic
-    var logic = require('../api/' + src);
+    var logic = require(config.serverRoot + '/api/' + src);
 
     // 逻辑处理
     var resData = logic(req.query);
@@ -39,7 +39,7 @@ router.post('/', function (req, res, next) {
   var src = msgTypeDic[msgType];
 
   // 加载logic
-  var logic = require('../api/' + src);
+  var logic = require(config.serverRoot + '/api/' + src);
 
   // 逻辑处理
   var resData = logic(req.body);
