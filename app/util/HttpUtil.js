@@ -18,7 +18,7 @@ var reg_tmp = fs.readFileSync(config.serverRoot + '/views/template/mail/register
  * @param userinfo 玩家信息
  * @param callback 回调函数
  */
-exports.sessionInit = function (req, res, userinfo, callback){
+exports.sessionInit = function (req, res, userinfo, callback) {
   //session创建
   req.session.regenerate(function () {
     //req.session.userId = 10000;
@@ -36,7 +36,7 @@ exports.sessionInit = function (req, res, userinfo, callback){
  * @param userinfo 玩家信息
  * @param callback 回调函数
  */
-exports.sessionDes = function (req, res, userinfo, callback){
+exports.sessionDes = function (req, res, userinfo, callback) {
   // 清除cookie
   res.clearCookie('connect.sid');
 
@@ -59,6 +59,10 @@ exports.resBack = function (res, backData, backPage) {
   // 页面不存在,只返回数据
   if (_.isUndefined(backPage) || _.isNull(backPage)) {
     res.send(backData);
+  }
+  // 返回数据不存在，则重定向
+  else if (_.isUndefined(backData) || _.isNull(backData)) {
+    res.redirect(backPage);
   }
   // 需要渲染页面
   else {

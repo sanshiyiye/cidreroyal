@@ -4,6 +4,8 @@ var express = require('express');
 
 global.app = express();
 
+//
+
 // 部分公共函数库
 global._ = require('lodash');
 global.Q = require('q');

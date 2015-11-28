@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>JFrame_HomePage</title>
+  <meta name="description" content="Copyright https://github.com/gaojunohyeah/JFrame">
+  <script data-main="/js/require.config.js" src="/vendor/requirejs/require.js"></script>
+  <script>require(['app'], function () {
+  })</script>
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-cloak ng-controller="langController">
+
+<div ng-controller="userController" ng-init="userInit()">
+  <div class="container">
+    <div class="row">
+      <div class=".col-lg-12">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

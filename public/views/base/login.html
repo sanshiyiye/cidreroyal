@@ -1,0 +1,24 @@
+<div class="clearfix bgNav"></div>
+
+<div class="container-fluid main">
+  <div class="row-fluid">
+    <div class="row-fluid container" style="margin-top:10px; width:98%">
+
+      <div class="row-fluid">
+        <div class="span12" style="text-align:center;">
+          <p id="title" class="span12 lead">{{'BASE.WEB_TITLE' |i18n:'base'}}</p>
+          <form>
+            <div>{{'USER.USERNAME' |i18n:'base'}}<input type="text" ng-model="user.userName"/></div>
+            <div>{{'USER.PASSWORD' |i18n:'base'}}<input type="password" ng-model="user.password"/></div>
+            <div><!-- style="text-align: right"-->
+              <button type="button" ng-click="login();" class="btn btn-success">{{'USER.LOGIN' |i18n:'base'}}</button>
+              <button type="reset" class="btn btn-danger">{{'BASE.RESET_INPUT' |i18n:'base'}}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

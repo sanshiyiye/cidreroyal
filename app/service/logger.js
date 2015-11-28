@@ -36,11 +36,12 @@ var consoleLog = log4js.getLogger('console');
 
 exports.init = function(){
   var log;
-  if('development' === app.get('env')){
-    log = consoleLog;
-  }else{
-    log = dateFileLog;
-  }
+  //if('development' === app.get('env')){
+  //  log = consoleLog;
+  //}else{
+  //  log = dateFileLog;
+  //}
+  log = dateFileLog;
 
   // 添加到express中间件
   app.use(log4js.connectLogger(log, {level:'INFO', format:':method :url'}));
