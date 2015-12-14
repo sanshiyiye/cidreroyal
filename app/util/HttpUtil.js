@@ -21,10 +21,15 @@ var reg_tmp = fs.readFileSync(config.serverRoot + '/views/template/mail/register
 exports.sessionInit = function (req, res, userinfo, callback) {
   //session创建
   req.session.regenerate(function () {
-    //req.session.userId = 10000;
+    var userId = 10000;
+    req.session.userId = userId;
     req.session.save();  //保存一下修改后的Session
+    var user = {
+      userId: userId,
+      authToken : req.session.id,
+    };
 
-    //res.send("SUCCESS");
+    exports.resBack(res, user);
   });
 };
 
@@ -33,17 +38,18 @@ exports.sessionInit = function (req, res, userinfo, callback) {
  *
  * @param req request对象
  * @param res response对象
- * @param userinfo 玩家信息
  * @param callback 回调函数
  */
-exports.sessionDes = function (req, res, userinfo, callback) {
+exports.sessionDes = function (req, res, callback) {
   // 清除cookie
   res.clearCookie('connect.sid');
+  req.session.userId = null;
 
   // session移除
   req.session.destroy(function () {
-    //重新生成session之后后续的处理
-    //res.send("SUCCESS");
+    //移除session之后后续的处理
+
+    exports.resBack(res, {});
   })
 };
 

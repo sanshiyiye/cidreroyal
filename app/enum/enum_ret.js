@@ -14,6 +14,7 @@ module.exports = {
   // 基础 		-1 -> -100
   SUCCESS:              0,      // 成功
   ERROR:                -1,     // 错误
+  PARAM_ERROR:          -2,     // 参数有误
   INNER_ERROR:          -99,    // 内部异常
 
   // 用户 		-101 -> -200

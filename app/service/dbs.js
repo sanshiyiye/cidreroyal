@@ -8,7 +8,13 @@
 var Sequelize = require('sequelize');
 var Redis = require('ioredis');
 
-var userinfo = require(config.serverRoot + "/model/UserInfo")
+var brand = require(config.serverRoot + "/model/Brand");
+var car = require(config.serverRoot + "/model/Car");
+var carmodel = require(config.serverRoot + "/model/CarModel");
+var cartype = require(config.serverRoot + "/model/CarType");
+var city = require(config.serverRoot + "/model/City");
+var userinfo = require(config.serverRoot + "/model/UserInfo");
+
 
 // mysql 连接
 function loadMysql() {
@@ -39,4 +45,9 @@ var sequelize = loadMysql();
 exports.sequelize = sequelize;
 
 // model映射
+exports.Brand = brand.Brand(sequelize);
+exports.Car = car.Car(sequelize);
+exports.CarModel = carmodel.CarModel(sequelize);
+exports.CarType = cartype.CarType(sequelize);
+exports.City = city.City(sequelize);
 exports.UserInfo = userinfo.UserInfo(sequelize);

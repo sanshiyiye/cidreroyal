@@ -5,7 +5,9 @@ var msgTypeDic = require(config.serverRoot + '/message/MessageType');
 router.all('/*', function (req, res, next) {
   // TODO 登陆session验证
   if (!req.session.userId) {
-    return next(new Error('oh no')); // handle error
+    var err = new Error('need login first!');
+    err.status = 401;
+    return next(err); // handle error
   }
 
   next(); // pass control to the next handler

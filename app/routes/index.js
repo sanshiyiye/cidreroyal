@@ -57,7 +57,7 @@ router.get('/login', function (req, res, next) {
   // 开发环境才需要收get请求
   if(JF.util.base.checkDevEnv()){
 
-    JF.util.http.sessionInit(req, res, userinfo, void 0);
+    JF.util.http.sessionInit(req, res, req.query.user, void 0);
   }
 });
 
@@ -65,7 +65,7 @@ router.get('/login', function (req, res, next) {
  * 登陆 post method, for pro-environment
  */
 router.post('/login', function (req, res, next) {
-  JF.util.http.sessionInit(req, res, userinfo, void 0);
+  JF.util.http.sessionInit(req, res, req.body.user, void 0);
 });
 
 /**
@@ -83,7 +83,7 @@ router.get('/logout', function (req, res, next) {
  * 登出 post method, for pro-environment
  */
 router.post('/logout', function (req, res, next) {
-  JF.util.http.sessionDes(req, res, userinfo, void 0);
+  JF.util.http.sessionDes(req, res, void 0);
 });
 
 module.exports = router;
