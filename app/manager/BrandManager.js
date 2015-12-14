@@ -4,6 +4,8 @@
  */
 
 'use strict';
+var util = require('util');
+var BaseManager = require(config.serverRoot + '/manager/base/BaseManager');
 
 /**
  * 品牌信息表管理器
@@ -15,5 +17,8 @@ var BrandManager = function () {
 
 
 };
+
+// 添加继承
+util.inherits(BrandManager, BaseManager);
 
 module.exports = new BrandManager();

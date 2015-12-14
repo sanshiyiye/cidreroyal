@@ -4,6 +4,8 @@
  */
 
 'use strict';
+var util = require('util');
+var BaseManager = require(config.serverRoot + '/manager/base/BaseManager');
 
 /**
  * 用户信息表管理器
@@ -196,5 +198,8 @@ var UserInfoManager = function () {
       .catch(err);
   };
 };
+
+// 添加继承
+util.inherits(UserInfoManager, BaseManager);
 
 module.exports = new UserInfoManager();

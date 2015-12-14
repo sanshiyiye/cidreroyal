@@ -16,12 +16,12 @@ var UserInfoDao = require(config.serverRoot + '/dao/UserInfoDao');
 module.exports = function (dbs) {
   var dao = {};
 
-  dao.BrandDao = new BrandDao(dbs.BrandDao);
-  dao.CarDao = new CarDao(dbs.CarDao);
-  dao.CarModelDao = new CarModelDao(dbs.CarModelDao);
-  dao.CarTypeDao = new CarTypeDao(dbs.CarTypeDao);
-  dao.CityDao = new CityDao(dbs.CityDao);
-  dao.UserInfoDao = new UserInfoDao(dbs.UserInfoDao);
+  dao.BrandDao = new BrandDao(dbs.Brand);
+  dao.CarDao = new CarDao(dbs.Car);
+  dao.CarModelDao = new CarModelDao(dbs.CarModel);
+  dao.CarTypeDao = new CarTypeDao(dbs.CarType);
+  dao.CityDao = new CityDao(dbs.City);
+  dao.UserInfoDao = new UserInfoDao(dbs.UserInfo);
   
 
   return dao;

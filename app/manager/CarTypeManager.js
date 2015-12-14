@@ -4,6 +4,8 @@
  */
 
 'use strict';
+var util = require('util');
+var BaseManager = require(config.serverRoot + '/manager/base/BaseManager');
 
 /**
  * 车型信息表管理器
@@ -15,5 +17,8 @@ var CarTypeManager = function () {
 
 
 };
+
+// 添加继承
+util.inherits(CarTypeManager, BaseManager);
 
 module.exports = new CarTypeManager();
