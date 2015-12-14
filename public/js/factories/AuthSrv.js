@@ -11,7 +11,7 @@ define([
     'use strict';
 
     var module = angular.module(config.name);
-    module.factory('authSrv', function ($http, $q, $window, alertSrv, reqSrv) {
+    module.factory('authSrv', function ($http, $q, $window, reqSrv) {
       var userInfo;
 
       function getUserInfo() {

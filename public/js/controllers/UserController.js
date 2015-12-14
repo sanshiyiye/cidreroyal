@@ -15,9 +15,7 @@ define([
     var module = angular.module(config.name);
 
     // appController controller
-    module.controller('appController', function ($scope, $rootScope, authSrv) {
-      $scope.navigation = routes;
-
+    module.controller('userController', function ($scope, $rootScope, authSrv) {
       /**
        * user's login information
        * @type {{userName: string, password: string, isLogin: boolean}}
@@ -57,7 +55,7 @@ define([
         // data not match
         else {
           // show user that the input password is wrong
-          alertSrv.set("ALERT.ERROR", "ALERT.USER.USERNAME_PASSWORD_ERROR", 'error');
+          //alertSrv.set("ALERT.ERROR", "ALERT.USER.USERNAME_PASSWORD_ERROR", 'error');
         }
       }
     });
