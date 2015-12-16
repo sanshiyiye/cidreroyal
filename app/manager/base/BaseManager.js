@@ -23,7 +23,7 @@ BaseManager.prototype.getList = function (res, query, mname, _page, _perPage, _s
 
   // 根据条件查询数据
   var queryList = function () {
-    return mdao.queryList(query, _page, _perPage, _sort, _order);
+    return mdao.queryList(query, false, _page, _perPage, _sort, _order);
   };
 
   // 根据条件查询数据
@@ -32,14 +32,9 @@ BaseManager.prototype.getList = function (res, query, mname, _page, _perPage, _s
   };
 
   var buildList = function (list, count) {
-    var resData = [];
-    _.forEach(list, function (data) {
-      resData.push(data.dataValues);
-    });
-
     res.setHeader('Content-Range', count);
 
-    JF.util.http.resBack(res, resData);
+    JF.util.http.resBack(res, list);
   };
 
 
