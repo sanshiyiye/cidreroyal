@@ -96,3 +96,36 @@ exports.registerTemplate = function (uid, username, token) {
 
   return ejs.render(reg_tmp, data);
 };
+
+/**
+ * 检查参数
+ *
+ * @param reqData request对象入参参数
+ * @param res response对象
+ * @param params 需要检查的参数数组
+ */
+exports.checkParam = function (reqData, res, params) {
+  _.forEach(params, function (param) {
+    // 参数不存在
+    if (_.isUndefined(reqData[param])
+      || _.isNull(reqData[param])) {
+      JF.util.http.resBack(res, {ret: JF.enums.ret.PARAM_ERROR});
+      return false;
+    }
+  });
+
+  return true;
+};
+
+/**
+ * http处理异常处理
+ * 如果在promise中调用时，必须手动传入res对象
+ * :: promise.catch(...error.bind(null,res))
+ * @param res response对象
+ * @param error 异常信息对象
+ */
+exports.error = function (res, error) {
+  console.error(error);
+  logger.error(error);
+  JF.util.http.resBack(res, {ret: JF.util.base.errorFilter(error)});
+};

@@ -26,7 +26,7 @@ var UserInfoManager = function () {
       from: config.mail_sender,
       to: userinfo.email,
       subject: config.mail_name + '-帐号激活',
-      html: JF.util.http.registerTemplate(userinfo.uid, userinfo.username, token),
+      html: JF.util.http.registerTemplate(userinfo.id, userinfo.username, token),
     };
 
     // 发送验证邮箱
