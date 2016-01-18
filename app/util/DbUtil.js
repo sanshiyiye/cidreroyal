@@ -9,9 +9,10 @@
  *
  * @param value 参数值
  * @param operator 参数操作符
+ * @param key 条件key
  * @return {{}}
  */
-exports.buildQueryParam = function (value, operator) {
+exports.buildQueryParam = function (value, operator, key) {
   var queryParam = {};
 
   // 根据操作符进行参数处理
@@ -25,6 +26,11 @@ exports.buildQueryParam = function (value, operator) {
       break;
     case JF.enums.db.like:
       queryParam[operator] = '%' + value + '%';
+      break;
+    case JF.enums.db.in:
+      if (!_.isEmpty(value)) {
+        queryParam[operator] = value;
+      }
       break;
     // 其他全部按 equal 处理
     case JF.enums.db.e:

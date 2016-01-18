@@ -9,7 +9,7 @@ var rootPath = path.normalize(__dirname + '/..');
 
 module.exports = {
   environment: 'development',
-  host: 'http://192.168.111.119:3000',
+  host: 'http://192.168.111.103:3000',
 
   // 项目基础路径定义
   root: rootPath,

@@ -36,7 +36,7 @@ var msgAuthDic = require(config.serverRoot + '/message/MessageAuth');
 //});
 
 /* POST game listen. for pro-environment */
-router.post('/', function (req, res, next) {
+router.post('*', function (req, res, next) {
   // 获取处理类
   var msgType = (req.body.msgType || "").toString();
 
@@ -63,7 +63,7 @@ router.post('/', function (req, res, next) {
   var logic = require(config.serverRoot + '/api/' + src);
 
   // 逻辑处理
-  var resData = logic(req.body);
+  var resData = logic(req.body, req, res, next);
   //// 如果有直接返回，则返回给客户端(一般logic内都会异步处理)
   //if (!_.isUndefined(resData) && !_.isNull(resData) && !_.isEmpty(resData)) {
   //  JF.util.http.resBack(res, resData);

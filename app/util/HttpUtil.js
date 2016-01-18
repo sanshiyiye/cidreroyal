@@ -26,7 +26,7 @@ exports.sessionInit = function (req, res, userinfo, callback) {
     req.session.save();  //保存一下修改后的Session
     var user = {
       userId: userId,
-      authToken : req.session.id,
+      authToken: req.session.id,
     };
 
     exports.resBack(res, user);
@@ -120,12 +120,18 @@ exports.checkParam = function (reqData, res, params) {
 /**
  * http处理异常处理
  * 如果在promise中调用时，必须手动传入res对象
- * :: promise.catch(...error.bind(null,res))
+ * :: promise.catch(...error.bind(null,res,msgData))
  * @param res response对象
+ * @param msgData 返回消息对象
  * @param error 异常信息对象
  */
-exports.error = function (res, error) {
-  console.error(error);
-  logger.error(error);
-  JF.util.http.resBack(res, {ret: JF.util.base.errorFilter(error)});
+exports.error = function (res, msgData, error) {
+  var errorCode = JF.util.base.errorFilter(error);
+
+  if (JF.enums.ret.INNER_ERROR === errorCode) {
+    console.error(error);
+    //logger.error(error);
+  }
+  msgData.setResult(errorCode);
+  JF.util.http.resBack(res, msgData);
 };

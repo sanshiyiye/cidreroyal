@@ -1,12 +1,12 @@
 /**
- * Logout消息
+ * LoadInitData消息
  * Created by auto tool.
  */
 
 'use strict';
 
 module.exports = function (data){
-  this.msgType = 10207;
+  this.msgType = 10211;
   if(!_.isUndefined(data) && !_.isNull(data)){
     
   }

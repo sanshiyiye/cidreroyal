@@ -99,17 +99,11 @@ var UserInfoManager = function () {
       }
     };
 
-    // 异常处理
-    var err = function (error) {
-      backMsg.setResult(JF.util.base.errorFilter(error));
-      JF.util.http.resBack(res, backMsg);
-    };
-
     // 逻辑处理
     Q.fcall(check)
       .then(register)
       .then(sendMail)
-      .catch(err);
+      .catch(JF.util.http.error.bind(null, res, backMsg));
   };
 
   /**
@@ -185,17 +179,63 @@ var UserInfoManager = function () {
       throw new Error(JF.enums.ret.SUCCESS);
     };
 
-    // 异常处理
-    var err = function (error) {
-      backMsg.setResult(JF.util.base.errorFilter(error));
-      JF.util.http.resBack(res, backMsg);
-    };
-
     // 逻辑处理
     Q.fcall(getData)
       .then(confirm)
       .then(sucBack)
-      .catch(err);
+      .catch(JF.util.http.error.bind(null, res, backMsg));
+  };
+
+  this.loadInitData = function (msg, res) {
+    // 消息返回
+    var backMsg = new JF.msg.UserLoadInitDataBackMsg();
+
+    // 获取品牌信息
+    var getBrands = function () {
+      return JF.dao.BrandDao.queryList(null, false);
+    };
+
+    // 获取城市信息
+    var getCitys = function () {
+      return JF.dao.CityDao.queryList(null, false);
+    };
+
+    // 获取汽车类型信息
+    var getCarTypes = function () {
+      return JF.dao.CarTypeDao.queryList(null, false);
+    };
+
+    // 获取汽车颜色信息
+    var getCarColors = function () {
+      return JF.dao.CarColorDao.queryList(null, false);
+    };
+
+    // 获取推荐标签信息
+    var getTags = function () {
+      return JF.dao.TagsDao.queryList(null, false);
+    };
+
+    // 获取品牌系列信息
+    var getCarSeries = function () {
+      return JF.dao.BrandSeriesDao.queryList(null, false);
+    };
+
+    // 结果构建
+    var buildRet = function (brands, citys, carTypes, carColors, tags, carSeries) {
+      backMsg.setBrandlist(brands);
+      backMsg.setCitylist(citys);
+      backMsg.setCartypelist(carTypes);
+      backMsg.setCarcolorlist(carColors);
+      backMsg.setTagslist(tags);
+      backMsg.setCarserieslist(carSeries);
+
+      throw new Error(JF.enums.ret.SUCCESS);
+    };
+
+    Q.all([getBrands(), getCitys(), getCarTypes()
+      , getCarColors(), getTags(), getCarSeries()])
+      .spread(buildRet)
+      .catch(JF.util.http.error.bind(null, res, backMsg));
   };
 };
 

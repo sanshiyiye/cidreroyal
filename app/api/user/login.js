@@ -5,9 +5,8 @@
 'use strict';
 
 // 登陆请求
-module.exports = function (reqData) {
-  var msg = new JF.msg.UserLoginMessage();
-  msg.init(reqData);
+module.exports = function (reqData, req, res, next) {
+  var msg = new JF.msg.UserLoginMessage(reqData);
 
 
 

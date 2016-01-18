@@ -138,7 +138,16 @@ BaseDao.prototype.queryList = function (query, needEntity, _page, _perPage, _sor
  * @return {*}
  */
 BaseDao.prototype.queryCount = function (query) {
-  return this.model.count();
+  var params = {
+    where: {},
+  };
+
+  // 查询条件
+  if (!_.isUndefined(query) && !_.isNull(query) && !_.isEmpty(query)) {
+    params.where = query;
+  }
+
+  return this.model.count(params);
 };
 
 module.exports = BaseDao;

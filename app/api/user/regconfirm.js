@@ -7,7 +7,7 @@
 /**
  * 注册验证请求
  */
-module.exports = function (reqData, res) {
+module.exports = function (reqData, req, res, next) {
   var msg = new JF.msg.UserRegconfirmMsg(reqData);
 
   // 用户注册验证
