@@ -19,6 +19,12 @@ module.exports = {
   // 根据条件查询车辆数量返回
   '10304' : 'car/QueryCarListBack',
   
+  // 获取车辆详细信息
+  '10305' : 'car/QueryCarInfo',
+  
+  // 根据条件查询车辆数量返回
+  '10306' : 'car/QueryCarInfoBack',
+  
   // 注册
   '10201' : 'user/Register',
   

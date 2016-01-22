@@ -11,7 +11,6 @@ module.exports = function (data){
     this.carList = data.carList || 0;
     this.pageNo = data.pageNo || 0;
     this.pageSize = data.pageSize || 0;
-    this.order = data.order || '';
     this.totalNum = data.totalNum || 0;
     
   }
@@ -24,9 +23,6 @@ module.exports = function (data){
   };
   this.setPagesize = function(pageSize){
     this.pageSize = pageSize;
-  };
-  this.setOrder = function(order){
-    this.order = order;
   };
   this.setTotalnum = function(totalNum){
     this.totalNum = totalNum;

@@ -16,6 +16,10 @@ module.exports = {
   serverRoot: rootPath + '/app',
   clientRoot: rootPath + '/public',
 
+  sellImgPath: '/files/seller/',
+  apprImgPath: '/files/appraiser/',
+  carImgPath: '/files/car/',
+
   // 数据库相关参数
   DB_dbname: 'jframe',
   DB_username: 'root',

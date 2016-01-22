@@ -32,6 +32,12 @@ exports.buildQueryParam = function (value, operator, key) {
         queryParam[operator] = value;
       }
       break;
+    case JF.enums.db.likeany:
+      queryParam[JF.enums.db.like] = {
+        $any: value
+      };
+
+      break;
     // 其他全部按 equal 处理
     case JF.enums.db.e:
     default :

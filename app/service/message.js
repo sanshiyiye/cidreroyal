@@ -14,6 +14,10 @@ exports.CarQueryCarListMsg = require('./../message/msg/CarQueryCarListMsg');
 
 exports.CarQueryCarListBackMsg = require('./../message/msg/CarQueryCarListBackMsg');
 
+exports.CarQueryCarInfoMsg = require('./../message/msg/CarQueryCarInfoMsg');
+
+exports.CarQueryCarInfoBackMsg = require('./../message/msg/CarQueryCarInfoBackMsg');
+
 exports.UserRegisterMsg = require('./../message/msg/UserRegisterMsg');
 
 exports.UserRegisterBackMsg = require('./../message/msg/UserRegisterBackMsg');

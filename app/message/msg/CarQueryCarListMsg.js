@@ -12,6 +12,7 @@ module.exports = function (data){
     this.pageNo = data.pageNo || 0;
     this.pageSize = data.pageSize || 0;
     this.order = data.order || '';
+    this.orderType = data.orderType || 0;
     
   }
   
@@ -26,6 +27,9 @@ module.exports = function (data){
   };
   this.setOrder = function(order){
     this.order = order;
+  };
+  this.setOrdertype = function(orderType){
+    this.orderType = orderType;
   };
 
   this.setResult = function(result) {

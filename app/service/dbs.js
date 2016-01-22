@@ -14,6 +14,7 @@ var brandseries = require(config.serverRoot + "/model/BrandSeries");
 var car = require(config.serverRoot + "/model/Car");
 var carcolor = require(config.serverRoot + "/model/CarColor");
 var carengine = require(config.serverRoot + "/model/CarEngine");
+var carimg = require(config.serverRoot + "/model/CarImg");
 var carmodel = require(config.serverRoot + "/model/CarModel");
 var cartype = require(config.serverRoot + "/model/CarType");
 var city = require(config.serverRoot + "/model/City");
@@ -56,6 +57,7 @@ exports.BrandSeries = brandseries.BrandSeries(sequelize);
 exports.Car = car.Car(sequelize);
 exports.CarColor = carcolor.CarColor(sequelize);
 exports.CarEngine = carengine.CarEngine(sequelize);
+exports.CarImg = carimg.CarImg(sequelize);
 exports.CarModel = carmodel.CarModel(sequelize);
 exports.CarType = cartype.CarType(sequelize);
 exports.City = city.City(sequelize);
@@ -64,14 +66,26 @@ exports.UserInfo = userinfo.UserInfo(sequelize);
 
 
 // 关联关系
-exports.UserInfo.hasMany(exports.Car);
+exports.Brand.hasMany(exports.BrandSeries, {foreignKey: 'brandId'});
+exports.BrandSeries.belongsTo(exports.Brand, {foreignKey: 'brandId'});
+
+exports.UserInfo.hasMany(exports.Car, {foreignKey: 'sellId'});
 exports.Car.belongsTo(exports.UserInfo, {foreignKey: 'sellId'});
 
-exports.Appraiser.hasMany(exports.Car);
+exports.Appraiser.hasMany(exports.Car, {foreignKey: 'appraiserId'});
 exports.Car.belongsTo(exports.Appraiser, {foreignKey: 'appraiserId'});
 
-exports.CarModel.hasMany(exports.Car);
+exports.CarModel.hasMany(exports.Car, {foreignKey: 'modelId'});
 exports.Car.belongsTo(exports.CarModel, {foreignKey: 'modelId'});
 
-exports.CarColor.hasMany(exports.Car);
+exports.CarColor.hasMany(exports.Car, {foreignKey: 'color'});
 exports.Car.belongsTo(exports.CarColor, {foreignKey: 'color'});
+
+exports.Car.hasMany(exports.CarImg, {foreignKey: 'carId'});
+exports.CarImg.belongsTo(exports.Car, {foreignKey: 'carId'});
+
+exports.BrandSeries.hasMany(exports.CarModel, {foreignKey: 'brandSeriesId'});
+exports.CarModel.belongsTo(exports.BrandSeries, {foreignKey: 'brandSeriesId'});
+
+exports.CarEngine.hasMany(exports.CarModel, {foreignKey: 'engineId'});
+exports.CarModel.belongsTo(exports.CarEngine, {foreignKey: 'engineId'});
