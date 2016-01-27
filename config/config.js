@@ -20,6 +20,17 @@ module.exports = {
   apprImgPath: '/files/appraiser/',
   carImgPath: '/files/car/',
 
+  // 价格基础单位(万)
+  priceUnit: 10000,
+
+  // 贷款 加成，首付比，月供总次数
+  loanUpPercent: 1.2,
+  loanFirstPrice: 0.3,
+  loanMonthCount: 36,
+
+  // 服务费比例
+  srvPricePercent: 0.03,
+
   // 数据库相关参数
   DB_dbname: 'jframe',
   DB_username: 'root',

@@ -25,6 +25,9 @@ module.exports = function (data){
     this.distance = data.distance || 0;
     this.city = data.city || 0;
     this.startTime = data.startTime || '';
+    this.srvPrice = data.srvPrice || 0;
+    this.firstLoanPrice = data.firstLoanPrice || 0;
+    this.monthLoanPrice = data.monthLoanPrice || 0;
     this.color = data.color || 0;
     this.tag = data.tag || '';
     this.seriesId = data.seriesId || 0;
@@ -86,6 +89,15 @@ module.exports = function (data){
   };
   this.setStarttime = function(startTime){
     this.startTime = startTime;
+  };
+  this.setSrvprice = function(srvPrice){
+    this.srvPrice = srvPrice;
+  };
+  this.setFirstloanprice = function(firstLoanPrice){
+    this.firstLoanPrice = firstLoanPrice;
+  };
+  this.setMonthloanprice = function(monthLoanPrice){
+    this.monthLoanPrice = monthLoanPrice;
   };
   this.setColor = function(color){
     this.color = color;

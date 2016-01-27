@@ -13,3 +13,5 @@ exports.check = require(config.serverRoot + '/util/CheckUtil');
 exports.crypto = require(config.serverRoot + '/util/CryptoUtil');
 
 exports.db = require(config.serverRoot + '/util/DbUtil');
+
+exports.car = require(config.serverRoot + '/util/CarUtil');

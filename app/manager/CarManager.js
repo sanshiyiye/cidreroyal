@@ -190,6 +190,13 @@ var CarManager = function () {
       backMsg.setColor(carData.color);
       backMsg.setTag(carData.tag);
 
+      // 计算服务费，贷款金额
+      var srvPrice = JF.util.car.calSrvPrice(carData.price);
+      var loanPrice = JF.util.car.calLoanPrice(carData.price);
+      backMsg.setSrvprice(srvPrice);
+      backMsg.setFirstloanprice(loanPrice[0]);
+      backMsg.setMonthloanprice(loanPrice[1]);
+
       return Q.all([
         queryCarModel(carData.modelId),
         queryCarImgs(carData.id),
