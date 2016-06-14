@@ -1,0 +1,2521 @@
+
+@font-face {
+    font-family: 'open_sans';
+    src: url("font/opensans-bold-webfont.eot")/*tpa=http://www.cidreroyal.com/css/font/opensans-bold-webfont.eot*/;
+    src: url("font/opensans-bold-webfont.eot-#iefix")/*tpa=http://www.cidreroyal.com/css/font/opensans-bold-webfont.eot?#iefix*/ format('embedded-opentype'),
+    url("font/opensans-bold-webfont.woff")/*tpa=http://www.cidreroyal.com/css/font/opensans-bold-webfont.woff*/ format('woff'),
+    url("font/opensans-bold-webfont.ttf")/*tpa=http://www.cidreroyal.com/css/font/opensans-bold-webfont.ttf*/ format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'open_sans';
+    src: url("font/opensans-regular-webfont.eot")/*tpa=http://www.cidreroyal.com/css/font/opensans-regular-webfont.eot*/;
+    src: url("font/opensans-regular-webfont.eot-#iefix")/*tpa=http://www.cidreroyal.com/css/font/opensans-regular-webfont.eot?#iefix*/ format('embedded-opentype'),
+    url("font/opensans-regular-webfont.woff")/*tpa=http://www.cidreroyal.com/css/font/opensans-regular-webfont.woff*/ format('woff'),
+    url("font/opensans-regular-webfont.ttf")/*tpa=http://www.cidreroyal.com/css/font/opensans-regular-webfont.ttf*/ format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pf_din_text_comp_pro';
+    src: url("font/pfdintextcomppro-regular-webfont.eot")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-regular-webfont.eot*/;
+    src: url("font/pfdintextcomppro-regular-webfont.eot-#iefix")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-regular-webfont.eot?#iefix*/ format('embedded-opentype'),
+    url("font/pfdintextcomppro-regular-webfont.woff")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-regular-webfont.woff*/ format('woff'),
+    url("font/pfdintextcomppro-regular-webfont.ttf")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-regular-webfont.ttf*/ format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_din_text_comp_pro';
+    src: url("font/pfdintextcomppro-medium-webfont.eot")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-medium-webfont.eot*/;
+    src: url("font/pfdintextcomppro-medium-webfont.eot-#iefix")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-medium-webfont.eot?#iefix*/ format('embedded-opentype'),
+    url("font/pfdintextcomppro-medium-webfont.woff")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-medium-webfont.woff*/ format('woff'),
+    url("font/pfdintextcomppro-medium-webfont.ttf")/*tpa=http://www.cidreroyal.com/css/font/pfdintextcomppro-medium-webfont.ttf*/ format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+html{
+    /*-webkit-text-size-adjust: none;*/
+    -webkit-font-smoothing: antialiased;
+}
+html, body{ height : 100%;min-width: 964px; }
+body {
+    font-family: 'open_sans', Georgia,"Times New Roman", serif;
+    /*
+    font-family: Georgia,"Times New Roman", serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
+    font-family: "Courier New", Courier, monospace;
+     */
+    margin:0;
+    color: #222;
+    overflow-y: scroll;
+}
+img {border: none}
+
+
+/* Gates
+-----------------------------------------------------------------------------*/
+.gates{
+    color: white;
+    position: absolute;
+    width: 100%;
+    min-width: 964px;
+    height: 100%;
+    min-height: 532px;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: url("../images/gates.jpg")/*tpa=http://www.cidreroyal.com/images/gates.jpg*/ no-repeat center 0 black;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    display: table-cell;
+    vertical-align: middle;
+}
+.gates table{
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 482px;
+    height: 408px;
+    margin: -246px -241px;
+}
+.gates td{vertical-align: middle;padding: 0}
+.gates .line{
+    width: 152px;
+    border-width: 0 164px;
+    border-style: solid;
+    border-color: white;
+    height: 1px;
+}
+.gates .gates_box{
+    border: 1px solid white;
+    border-top: 0;
+    width: 480px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    min-height: 147px;
+}
+.gates .logo{
+    position: absolute;
+    top: -62px;
+    left: 50%;
+    margin: 0 -56px;
+    display: block;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.gates .h1{
+    margin: 50px 0 20px;
+    color: white;
+}
+.gates .hr{
+    width: 45px;
+    margin: 20px auto;
+}
+.gates p{margin: 0}
+.gates .btn_holder{margin: 34px 0}
+.gates .btn{margin: 0 9px}
+.gates .warning{border-top: 0}
+.gates2{
+    padding: 0 0 34px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -8px;
+}
+
+/* wrapper
+-----------------------------------------------------------------------------*/
+.wrapper.wrapper_gates {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+    left: 0;
+    top: 0;
+    z-index: 1;
+    /*visibility: hidden;*/
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+.min_width{
+    width: 964px;
+    margin: auto;
+}
+/*-----------------------------------*/
+/*::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+/*::selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+
+a {
+    color: #323232;
+    text-decoration: underline;
+    -webkit-transition: all 200ms ;
+    -moz-transition: all 200ms ;
+    -ms-transition: all 200ms ;
+    -o-transition: all 200ms ;
+    transition: all 200ms ;
+}
+/*a:visited { color: #551a8b; }*/
+a:hover { text-decoration: none }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+.form{
+    display: block;
+}
+.form fieldset{
+    margin: 0 0 25px;
+}
+.form .fieldset_line{
+    margin-left: -15px;
+}
+.form .fieldset_line fieldset{
+    float: left;
+    width: 100px;
+    margin-left: 15px;
+}
+.form .form_footer{
+    margin: 30px 0 0;
+    text-align: center;
+}
+.form .label{
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    margin: 0 0 9px;
+}
+.form .label.big{
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 0 7px;
+}
+.form .input_holder{
+    position: relative;
+    z-index: 1;
+    padding: 0 37px 0 15px;
+}
+.form .input_holder input,
+.form .input_holder textarea{
+    font-size: 14px;
+    line-height: 17px;
+    color: #323232;
+    font-family: 'open_sans', Georgia,"Times New Roman", serif;
+    border: 0;
+    padding: 7px 37px 10px 15px;
+    margin: 0 -37px 0 -15px;
+    width: 100%;
+    display: block;
+    background: #fdfdfd;
+}
+.form .input_holder textarea{
+    padding: 7px 15px 10px;
+    margin: 0 -37px 0 -15px;
+    width: 310px;
+    min-height: 61px;
+}
+.form .input_status{
+    display: none;
+    background: url("../images/input_error.png")/*tpa=http://www.cidreroyal.com/images/input_error.png*/ no-repeat 0 0;
+    width: 23px;
+    height: 22px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -11px 7px 0 0;
+}
+.form .input_holder.error input,
+.form .input_holder.error textarea{background-color: #d4d4d4}
+.form .input_holder.error .input_status{display: block}
+.form .hr{margin: 25px 0}
+.form .help_text{
+    margin: 4px 0 0;
+}
+.form .select.act,
+.form .select{
+    background: #fdfdfd;
+    font-weight: normal;
+    text-transform: none;
+}
+.form .select .sel_val{
+    background: url("../images/arrow_down.png")/*tpa=http://www.cidreroyal.com/images/arrow_down.png*/ no-repeat right center;
+    padding: 8px 0 10px;
+}
+.form .select .sel_opnts{
+    background: #fdfdfd;
+    max-height: 330px;
+}
+.form .attention_text{
+    background: url("../images/attention_icon.png")/*tpa=http://www.cidreroyal.com/images/attention_icon.png*/ no-repeat 12px 12px #fdfdfd;
+    color: #c7b884;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Georgia,"Times New Roman", serif;
+    padding: 12px 0 19px 57px;
+    font-style: italic;
+}
+.form .attention_text .title{
+    margin: 0 0 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'open_sans', Georgia,"Times New Roman", serif;
+    font-size: 14px;
+    line-height: 17px;
+}
+.form .captcha{
+    height: 37px;
+    overflow: hidden;
+    background: #d0c49a;
+    margin: 0 0 11px;
+}
+.form .captcha img{}
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+label { cursor: pointer; }
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+button, input { line-height: normal; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+button[disabled], input[disabled] { cursor: default; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+/*-----------------------------------*/
+.inline-block		{ display:inline-block;zoom:1;//display:inline; }
+.none				{ display:none !important; }
+
+.invisible          { visibility: hidden; }
+.hidden             { display: none !important; visibility: hidden !important; }
+.visible			{ visibility:visible !important; }
+
+.clear				{ clear:both; height:0; font-size:0; line-height:0; overflow:hidden; display:block; }
+.clearfix:before,
+.clearfix:after     { content: ""; display: table; }
+.clearfix:after     { clear: both; }
+.clearfix           { *zoom: 1; }
+
+.fleft				{ float:left !important; }
+.fright				{ float:right !important; }
+
+.vat                { vertical-align:top !important; }
+.vam                { vertical-align:middle !important; }
+.vab                { vertical-align:bottom !important; }
+
+.tar                { text-align: right }
+.tac                { text-align: center }
+
+.opacity0{
+    opacity:0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+}
+.ie_7{}
+.ie_8{}
+.transition{
+    -webkit-transition: all 200ms ;
+    -moz-transition: all 200ms ;
+    -ms-transition: all 200ms ;
+    -o-transition: all 200ms ;
+    transition: all 200ms ;
+}
+.border-radius2{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.not_select{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.hr{
+    background: #726947;
+    height: 1px;
+    display: block;
+    margin: auto;
+}
+.back_link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #413d34;
+    float: left;
+    margin: 31px 0 0;
+}
+.back_link:hover{color: #c7b884}
+
+/* ICON
+-----------------------------------------------------------------------------*/
+.icon{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    background: url("../images/sprite.png")/*tpa=http://www.cidreroyal.com/images/sprite.png*/ no-repeat 0 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    position: relative;
+}
+.email_link{
+    background-position: 0 0;
+    width: 42px;
+    height: 28px;
+    margin-left: 15px;
+}
+a.email_link:hover{background-position: 0 -32px}
+.i_plus{
+    background-position: 0 -165px;
+    width: 25px;
+    height: 25px;
+}
+.arrow{
+    width: 25px;
+    height: 47px;
+    cursor: pointer;
+}
+.arrow.left{background-position: 0 -63px}
+.arrow.left:hover{background-position: 0 -113px}
+.arrow.right{background-position: -35px -63px}
+.arrow.right:hover{background-position: -35px -113px}
+.random{
+    background: url("../images/random.png")/*tpa=http://www.cidreroyal.com/images/random.png*/ no-repeat 0 2px;
+    padding: 0 0 0 32px;
+    min-height: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.random:hover{text-decoration: none}
+.more_cards{
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.more_cards:hover{text-decoration: none}
+.icon.fb{
+    background-position: 0 -194px;
+    width: 8px;
+    height: 16px;
+}
+.icon.vk{
+    background-position: -12px -198px;
+    width: 10px;
+    height: 12px;
+}
+.icon.tw{
+    background-position: -25px -198px;
+    width: 16px;
+    height: 12px;
+}
+
+/* BTN
+-----------------------------------------------------------------------------*/
+.btn{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 15px;
+    background: #413d34;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 30px 7px;
+    padding: 6px 22px 7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: all 200ms ;
+    -moz-transition: all 200ms ;
+    -ms-transition: all 200ms ;
+    -o-transition: all 200ms ;
+    transition: all 200ms ;
+    font-style: normal;
+    font-family: 'open_sans';
+    text-decoration: none;
+    position: relative;
+}
+.btn:hover{background: #c7b784}
+.btn.act{background: transparent !important;cursor: default;color: #413d34}
+.btn.disabled{background: #ecebea !important;cursor: default}
+.btn.disabled.light{background: #413d34 !important;color: #413d34 !important;}
+.btn_with_icon{margin-left: 38px}
+.btn_icon{
+    width: 38px;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    z-index: 1;
+    background: #7a7771;
+}
+.btn_icon .fb{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -8px -4px;
+}
+.btn_icon.person_count{
+    background: url("../images/person_count.png")/*tpa=http://www.cidreroyal.com/images/person_count.png*/ no-repeat 11px 11px #413d34;
+    width: auto;
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: bold;
+    color: white;
+    padding: 0 10px 0 29px;
+}
+.btn_icon.person_count span{display: block;margin: 6px 0 0}
+.btn.light{
+    color: #413d34;
+    background: white;
+}
+.btn.light:hover{color: white;background: #c7b784}
+.btn.middle{
+    font-size: 15px;
+    line-height: 18px;
+    padding: 8px 40px 12px;
+}
+.btn_input{position: relative;z-index: 1}
+.btn_input .submit{position: absolute;z-index: 10;width: 100%;height: 100%;opacity:0;-moz-opacity: 0;filter: alpha(opacity=0);overflow: hidden;left: 0;top: 0}
+.btn_input .submit input{position: absolute;z-index: 10;width: auto !important;height: auto !important;left: 0;top: 0;margin: -2px !important;font-size: 10000px !important;}
+.btn_holder{
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+.card_content .edit_card_btn{margin: 31px 0 0}
+.edit_card_btn{
+    float: right;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+.edit_card_btn span{
+    background: url("../images/edit_icon.png")/*tpa=http://www.cidreroyal.com/images/edit_icon.png*/ no-repeat 0 1px;
+    display: block;
+    padding: 0 0 0 20px;
+}
+
+/*social_links*/
+.social_links{}
+.circle{
+    float: left;
+    background: url("../images/circle_bg.png")/*tpa=http://www.cidreroyal.com/images/circle_bg.png*/ no-repeat center #c7b884;
+    width: 29px;
+    height: 29px;
+    display: block;
+    -webkit-transition: all 200ms ;
+    -moz-transition: all 200ms ;
+    -ms-transition: all 200ms ;
+    -o-transition: all 200ms ;
+    transition: all 200ms ;
+    position: relative;
+    z-index: 1;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.circle:hover{background-color: #413d34}
+.circle .fb,
+.circle .vk,
+.circle .tw{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -8px -4px;
+}
+.circle .vk{margin: -6px -4px;}
+.circle .tw{margin: -6px -8px;}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.select{
+    font-style: normal;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    color: #2d3536;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: 'open_sans';
+    font-weight: bold;
+    padding: 0 20px;
+}
+.select.act{z-index: 20;background: #f3f3f3}
+.select.act .sel_val{border-bottom-color: #e1e0e0}
+.select .sel_val{
+    border-bottom: 1px solid transparent;
+    margin: 0;
+    padding: 13px 0 11px;
+}
+.select .sel_val span{
+    padding: 0 18px 0 0;
+    cursor: pointer;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    white-space: nowrap;
+    /*background: url('../images/arrow_down.png') no-repeat right center;*/
+}
+.select.act .sel_opnts{display: block}
+.select .sel_opnts{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 100%;
+    z-index: 1;
+    background: #f3f3f3;
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 0;
+    display: none;
+}
+.select .sel_optn {
+    padding: 8px 20px 11px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.select .sel_optn.act{color: #c7b884}
+.select .sel_optn:hover{ background: #fbfbfb; }
+/* Footer
+-----------------------------------------------------------------------------*/
+footer {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    margin-left: -482px !important;
+    padding: 78px 0 168px;
+    color: #aba2a2;
+}
+.copyright{
+    float: left;
+}
+.aimbulance{
+    float: right;
+    width: 89px;
+    height: 11px;
+    margin: 8px 0 0;
+}
+.aimbulance img{vertical-align: top}
+.logo_holder{
+    text-align: center;
+    padding: 0 400px;
+    margin: -43px 0 0;
+}
+.warning{
+    border-top: 1px solid #c7b884;
+    background: url("../images/warning.jpg")/*tpa=http://www.cidreroyal.com/images/warning.jpg*/ no-repeat center 51px white;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 124px;
+    color: transparent;
+    text-indent: -9999px;
+}
+.warning.ru{ background-image: url("../images/warning_ru.png")/*tpa=http://www.cidreroyal.com/images/warning_ru.png*/;}
+.warning.en{ background-image: url("../images/warning_en.png")/*tpa=http://www.cidreroyal.com/images/warning_en.png*/;}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+    text-align: center;
+    height: 108px;
+    padding: 24px 0 0;
+    position: relative;
+    z-index: 10;
+}
+nav{
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #c7b884;
+    color: #413d34;
+    font-size: 0;
+    line-height: 0;
+    padding: 0 0 24px;
+}
+nav .logo{
+    padding: 0;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    width: 112px;
+    height: 83px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 27px;
+}
+nav .logo img{vertical-align: bottom}
+nav ul{
+    padding: 0;
+    margin: 22px 0 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    width: 399px;
+    text-align: left;
+}
+nav li{
+    font-size: 14px;
+    line-height: 17px;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    margin: 0 8px;
+}
+nav{}
+nav span,
+nav a{display: block;padding: 11px 0}
+nav a{color: #413d34;text-decoration: none}
+nav a:focus,
+nav a:hover{color: #b69e76}
+nav span,
+nav a.act{
+    color: #aba2a2;
+    background: url("../images/nav_act.png")/*tpa=http://www.cidreroyal.com/images/nav_act.png*/ no-repeat center 0;
+}
+nav span{cursor: default}
+.main_page nav {color: #ffffff;border-bottom: 0}
+.main_page nav a{color: #ffffff}
+.main_page nav a:focus,
+.main_page nav a:hover{color: #c7b784}
+.main_page nav a.act,
+.main_page nav span{color: #aba2a2}
+.user_box{
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    position: absolute;
+    right: 50%;
+    margin: 0 -482px 0 0;
+    top: 0;
+    z-index: 10;
+    background: #fcfae7;
+    padding: 9px 22px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+}
+.user_box a, .user_box span{
+    float: left;
+    color: #c7b884;
+    text-decoration: none;
+}
+.user_box a:hover, .user_box span:hover{color: #323232; cursor: pointer}
+.user_box .vhr{
+    background: #ece6c9;
+    width: 1px;
+    height: 16px;
+    float: left;
+    margin: 0 15px;
+}
+
+
+/* POPUP
+-----------------------------------------------------------------------------*/
+.body_scroll {
+    overflow-y: scroll ;
+}
+.wrapper_popup {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    margin-left: -50%;
+}
+.back{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    background: url("../images/back_bg.png")/*tpa=http://www.cidreroyal.com/images/back_bg.png*/ repeat;
+    left: 0;
+    top: 0;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+.popup_table{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+.popup_table.hide{
+    left: -100%;
+    top: -100%;
+}
+.popup_table .pt_td{
+    padding: 0;
+    vertical-align: middle;
+}
+.popup{
+    margin: 30px auto;
+    position: relative;
+    z-index: 3;
+    width: 340px;
+    padding: 30px 35px;
+    background: #f3f3f3;
+    border-bottom: 3px solid #d6d6d6;
+    text-align: center;
+    color: #323232;
+    font-size: 16px;
+    line-height: 18px;
+}
+.close{
+    width: 28px;
+    height: 28px;
+    background: url("../images/close.png")/*tpa=http://www.cidreroyal.com/images/close.png*/ no-repeat center;
+    cursor: pointer;
+    -webkit-transition: all 200ms ;
+    -moz-transition: all 200ms ;
+    -ms-transition: all 200ms ;
+    -o-transition: all 200ms ;
+    transition: all 200ms ;
+}
+.close:hover{background-color: #c7b784}
+.popup .close{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+}
+.popup_header{
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.popup_video{
+    width: 960px;
+    padding: 10px;
+    height: 540px;
+}
+.popup .hr{background: #fdfdfd}
+.popup p{margin: 18px 0}
+.popup .help_text{
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #acacac;
+}
+/*popup_order*/
+.popup_order{}
+.popup_order .form{
+    text-align: left;
+    margin: 45px 0 0;
+}
+
+/*popup_like*/
+.popup_like{}
+.popup_like .popup_header{margin-bottom: 25px}
+
+/*popup_code*/
+.popup_code{}
+.popup_code .form{
+    margin: 29px 0 0;
+}
+.popup_code .form_footer{
+    margin: 0;
+}
+.popup_code .form .fieldset_line fieldset{
+    width: 162px;
+}
+
+/*popup_regret*/
+.popup_regret{padding-bottom: 5px}
+.popup_regret .popup_header{margin-bottom: -13px}
+
+/*orders_ended*/
+
+.popup_orders_ended{padding-bottom: 5px}
+.popup_orders_ended .popup_header{margin-bottom: -13px}
+
+/*popup_congrats*/
+.popup_congrats{padding-bottom: 15px;}
+.popup_congrats .popup_header{margin-bottom: -13px}
+.popup_congrats p{margin-left: 5px;margin-right: 5px}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+    padding: 18px 0 269px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-style: normal;
+    color: #c7b884;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'open_sans';
+    font-weight: bold;
+}
+.h1{
+    font-style: normal;
+    color: #c7b884;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'open_sans';
+    letter-spacing: .3px;
+}
+.h2{
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'open_sans';
+}
+h3{
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/*main*/
+.main{}
+.main .intro .min_width{
+    position: relative;
+    z-index: 1;
+    height: 781px;
+}
+.main .intro{
+    background: url("../images/intro.jpg")/*tpa=http://www.cidreroyal.com/images/intro.jpg*/ no-repeat center 0 #fcfae7;
+    height: 781px;
+    padding: 150px 0 0;
+    margin: -150px 0 0;
+    border-bottom: 1px solid white;
+    font-size: 15px;
+    line-height: 18px;
+}
+.intro .join_us{
+    position: absolute;
+    right: 63px;
+    bottom: 92px;
+    z-index: 3;
+    width: 250px;
+}
+.intro .hr{background: #cac8b9;margin: 22px 22px 22px 0}
+
+.intro .bottle_img{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 107px;
+    width: 100%;
+    z-index: 2;
+}
+.intro .bottle_text{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    z-index: 1;
+}
+.intro .bottle_info{
+    position: absolute;
+    left: 28px;
+    bottom: 0;
+    z-index: 3;
+    width: 296px;
+    font-size: 15px;
+    line-height: 18px;
+    min-height: 253px;
+}
+.intro .bottle_info .title{
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.intro .bottle_info .sub_title{
+    font-size: 20px;
+    line-height: 24px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    margin: 0 0 11px;
+}
+.intro .bottle_info .text{
+    margin: 0 0 27px;
+}
+.intro .bottle_info .btn{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about_links{
+    border-top: 1px solid #f4f1e6;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    padding: 46px 0 0;
+}
+.about_links .h1{
+    font-style: normal;
+    margin: 0 0 12px;
+}
+.about_links .hr{
+    background: #cccccc;
+    width: 227px;
+}
+.about_links .text{
+    margin: 8px 0;
+}
+
+.info_block_holder{
+    margin: 30px 0 0 -16px;
+}
+.info_block{
+    font-style: normal;
+    float: left;
+    margin: 16px 0 0 16px;
+    text-align: center;
+    overflow: hidden;
+    width: 310px;
+    height: 290px;
+    position: relative;
+    z-index: 1;
+    background: #413d34;
+    color: white;
+}
+.info_block.big{width: 636px }
+.info_block.video_block{cursor: pointer;}
+.info_block img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.info_block .title{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+    margin: -14px 0 0;
+}
+.info_block .i_plus{
+    position: absolute;
+    left: 50%;
+    bottom: 49px;
+    margin: -13px;
+    z-index: 2;
+}
+.info_block table{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #413d34;
+    z-index: 3;
+}
+.info_block td{padding: 0 20px;vertical-align: middle}
+.info_block .hr{width: 172px;margin: 23px auto;background: #c7b884}
+.info_block .link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+.info_block p a{
+    color: #c7b784;
+    font-style: normal;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'open_sans', Georgia,"Times New Roman", serif;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: 30px 0 0;
+}
+.info_block p{
+    margin: 0;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    color: #aba2a2;
+    font-size: 15px;
+    line-height: 18px;
+}
+.info_block .i_plus,
+.info_block img,
+.info_block table{
+    -webkit-transition: all 800ms ;
+    -moz-transition: all 800ms ;
+    -ms-transition: all 800ms ;
+    -o-transition: all 800ms ;
+    transition: all 800ms ;
+}
+.info_block:hover .i_plus{bottom: -40px}
+.info_block:hover img{margin-bottom: 290px}
+.info_block.video_block:hover img{margin-bottom: 0}
+.info_block:hover table{top: 0}
+
+
+/*about*/
+.about {
+    text-align: center;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 68px;
+}
+.about .h1{margin: 0 0 24px}
+.about .text{
+    margin: 0 0 7px;
+}
+
+/*company*/
+.company{
+    text-align: center;
+    margin: 0 0 50px;
+}
+.company .h1{margin: 0 0 30px}
+.company .founder{
+    float: left;
+    float: left;
+    margin: 22px 0 0 -275px;
+    width: 211px;
+    text-align: center;
+    color: #413d34;
+    font-size: 17px;
+    line-height: 18px;
+}
+.company .founder img{
+    vertical-align: bottom;
+}
+.company .founder h3{
+    margin: 26px 0 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 18px;
+    color: #413d34;
+}
+.company .founder i{
+    display: block;
+    font-family: Georgia,"Times New Roman", serif;
+}
+.company .company_content{
+    padding: 0 0 0 340px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 18px;
+    color: #323232;
+    margin: -22px 0 0;
+}
+.company_content p{margin: 18px 0 0}
+.company_content p:first-child{margin-top: 0}
+.founder_signature {
+    background: url("../images/founder_signiture.jpg")/*tpa=http://www.cidreroyal.com/images/founder_signiture.jpg*/ no-repeat right 16px;
+    border-top: 1px solid #cccccc;
+    min-height: 53px;
+    padding: 40px 0 20px;
+    margin: 38px 0 0;
+}
+
+
+.company .clmn.left{width: 480px}
+.company .clmn.right{float: right;width: 440px}
+.company .text{
+    font-size: 16px;
+    line-height: 18px;
+}
+.company .text p{margin: 0 0 18px}
+.map{height: 310px;margin: 4px 0 30px}
+.contact_info{
+    font-style: italic;
+    font-size: 14px;
+    line-height: 17px;
+    color: #413d34;
+    font-family: Georgia,"Times New Roman", serif;
+    border-top: 1px solid #cccccc;
+    padding: 36px 0 52px;
+}
+.contact_info .h2{color: #413d34;margin: 0 0 11px}
+.contact_info .btn_holder{
+    text-align: left;
+    width: 175px;
+    padding: 3px 0 0;
+    margin: 0;
+    float:left;
+}
+.contact_info .clmn1{float:left;width: 150px;padding-right: 15px}
+.contact_info .clmn2{float:left;width: 260px;padding-right: 15px}
+
+
+/*buy*/
+.buy{
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+}
+.buy .h1{
+    text-align: center;
+    margin: 0 0 25px;
+}
+.buy .text{
+    text-align: center;
+    margin: 0;
+}
+.buy_controls{
+    margin: 38px 0 0;
+}
+.buy_controls .select{
+    float: left;
+    min-width: 160px;
+    margin: 0 0 0 -20px;
+}
+.buy_controls .buy_nav{
+    float: right;
+    padding: 0;
+    margin: 8px 0 0;
+    list-style: none;
+}
+.buy_controls .buy_nav li{float: left}
+.buy_controls .buy_nav span.btn{
+    background: none !important;
+    color: #413d34;
+    cursor: default;
+}
+.buy_controls .buy_nav .btn{
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    padding-botto: 5px;
+    padding-top: 5px;
+}
+.buy_map{
+    border-top: 1px solid #f4f1e6;
+    border-bottom: 1px solid #f4f1e6;
+    height: 615px;
+    font-style: normal;
+}
+.buy_stores{
+    padding: 24px 30px 65px;
+    margin: 11px 0 0;
+    list-style: none;
+    font-size: 0;
+    line-height: 0;
+    border-top: 1px solid #f4f1e6;
+}
+.buy_stores li{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top;
+    padding: 20px 0 20px 150px;
+    overflow: hidden;
+    width: 300px;
+    font-size: 15px;
+    line-height: 18px;
+}
+.buy_stores .img{
+    overflow: hidden;
+    width: 130px;
+    float: left;
+    margin: 0 0 0 -150px;
+    min-height: 50px;
+}
+.buy_stores .img img{vertical-align: bottom;}
+.buy_stores .title{
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    font-family: 'open_sans';
+    font-weight: bold;
+    padding: 4px 0 0;
+}
+
+
+/*page404*/
+.page404{
+    font-size: 18px;
+    line-height: 24px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    text-align: center;
+    text-transform: none;
+}
+.page404 table{width: 656px;margin-left: -328px;}
+.page404 .gates_box{
+    width: 654px;
+    margin-bottom: 46px;
+}
+.page404 .line{border-width: 0 251px}
+.page404 .h1{margin-top: 38px}
+.page404 ul{
+    padding: 0;
+    margin: 31px 0 0;
+    list-style: none;
+    font-style: normal;
+}
+.page404 ul li{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: 'open_sans';
+    margin: 0 10px;
+}
+.page404 ul a{color: #c7b884;text-decoration: underline}
+.page404 ul a:hover{text-decoration: none}
+
+/*debugging*/
+.debugging{}
+.debugging .gates_box{min-height: 116px}
+.debugging .h1{}
+
+
+/*products*/
+.products{
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    text-align: center;
+}
+.products .h1{margin: 0 0 25px}
+.products .text{
+    margin: 0;
+}
+.product_slider{
+    margin: 42px 0 0;
+    text-align: left;
+    background: #fcfae7;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.product_slider .slider_holder{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    /*width: 864px;*/
+    width: 100%;
+    margin: auto;
+    height: 550px;
+}
+.product_slider .arrow{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -24px 500px;
+    z-index: 10
+}
+.product_slider .arrow.left{right: 50%;left: auto;}
+.product_slider .slider_item{
+    color: #413d34;
+    /*width: 964px;*/
+    width: 360px;
+    padding: 0 64px 0 540px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin: 0 -482px;
+    top: 0;
+    height: 550px;
+    *font-size: 400px;
+    line-height: 550px;
+}
+.slider_item .item_inner{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    font-size: 16px;
+    line-height: 19px;
+    vertical-align: middle;
+}
+.product_slider .slider_item em{
+    font-family: Georgia,"Times New Roman", serif;
+    display: block;
+    margin: 0 0 3px;
+    font-size: 18px;
+}
+.product_slider .slider_item .h1{color: #413d34}
+.product_slider .slider_item .hr{width: 227px;margin: 18px 0 20px}
+.product_slider .slider_item p{
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+}
+.product_slider .slider_item.right{padding: 0 540px 0 64px;background-position: right center}
+.toggle_holder{
+    position: absolute;
+    left: 0;
+    bottom: 46px;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    z-index: 10;
+}
+.toggle{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    width: 15px;
+    height: 15px;
+    background: url("../images/sprite.png")/*tpa=http://www.cidreroyal.com/images/sprite.png*/ no-repeat -45px 0;
+    cursor: pointer;
+}
+.toggle:hover,
+.toggle.act{background-position: -45px -15px}
+.toggle.act{cursor: default}
+
+/*info_window*/
+.info_window{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info_window .iw_inner{
+    letter-spacing: -0.5px;
+    font-size: 14px;
+    line-height: 17px;
+    position: absolute;
+    left: 27px;
+    top: -42px;
+    z-index: 1;
+    background: #f3f3f3;
+    padding: 23px 26px;
+    width: 208px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+    color: #626262;
+}
+.info_window .iw_title{
+    color: black;
+    font-family: 'open_sans';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 0 9px;
+    letter-spacing: 1px;
+}
+.info_window .iw_text{
+    font-style: italic;
+}
+.info_window .iw_arrow{
+    border-width: 10px;
+    border-left-width: 0;
+    border-style: solid;
+    border-color: transparent #f3f3f3;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 100%;
+    top: 12px;
+    z-index: 1;
+}
+.info_window .iw_close{
+    background: url("../images/iw_close.png")/*tpa=http://www.cidreroyal.com/images/iw_close.png*/ no-repeat center #413d34;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+.info_window .iw_close:hover{background-color: #c7b784}
+.info_window .title{font-weight: bold}
+
+/*product_slider2*/
+.product_slider2{
+    background: url("../images/product_bg.png")/*tpa=http://www.cidreroyal.com/images/product_bg.png*/ no-repeat center 120px;
+    min-height: 351px;
+    position: relative;
+    z-index: 1;
+    margin: 50px 0 8px;
+}
+.slider_holder2{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: 640px;
+}
+.arrows{
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50px;
+    margin: 0 -482px;
+    z-index: 20;
+}
+.arrows i{
+    background: url("../images/arrows.png")/*tpa=http://www.cidreroyal.com/images/arrows.png*/ no-repeat 0 0;
+    width: 25px;
+    height: 47px;
+    display: block;
+    margin: 354px auto 0;
+}
+.arrows.left{}
+.arrows.left i{}
+.arrows.right{left: auto;right: 50%}
+.arrows.right i{background-position: right 0}
+.arrows.left:hover i{background-position: 0 bottom}
+.arrows.right:hover i{background-position: right bottom}
+.item_img{}
+.item_info{
+    color: #413d34;
+    width: 560px;
+}
+.item_info .title{
+    font-family: 'pf_din_text_comp_pro';
+    font-size: 64px;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+.item_info .sub_title{
+    font-family: Georgia,"Times New Roman", serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 22px;
+}
+.item_info p{
+    margin: 45px 0 0;
+    color: #706d66;
+    font-size: 15px;
+    line-height: 18px;
+    width: 510px;
+}
+.bottle1,
+.bottle2,
+.bottle3{
+    color: #413d34;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    padding-top: 39px;
+}
+.bottle1 b,
+.bottle2 b,
+.bottle3 b{
+    font-size: 14px;
+    line-height: 17px;
+}
+.bottle1{
+    background: url("../images/slider_bottle1.png")/*tpa=http://www.cidreroyal.com/images/slider_bottle1.png*/ no-repeat 0 26px;
+    min-height: 47px;
+    padding-left: 37px;
+}
+.bottle2{
+    background: url("../images/slider_bottle2.png")/*tpa=http://www.cidreroyal.com/images/slider_bottle2.png*/ no-repeat 0 0;
+    min-height: 48px;
+    padding-left: 37px;
+}
+.bottle3{
+    background: url("../images/slider_bottle3.png")/*tpa=http://www.cidreroyal.com/images/slider_bottle3.png*/ no-repeat 0 28px;
+    min-height: 48px;
+    padding-left: 60px;
+}
+.product_slider2 .item_img{
+    position: absolute;
+    left: 76px;
+    top: 0;
+    z-index: 3;
+}
+.product_slider2 .item_info{
+    position: absolute;
+    left: 405px;
+    top: 171px;
+    z-index: 1;
+}
+.product_slider2 .bottle1{
+    position: absolute;
+    left: 405px;
+    top: 413px;
+    z-index: 1;
+}
+.product_slider2 .bottle2{
+    position: absolute;
+    left: 545px;
+    top: 413px;
+    z-index: 1;
+}
+.product_slider2 .bottle3{
+    position: absolute;
+    left: 695px;
+    top: 413px;
+    z-index: 1;
+}
+
+.play_btn{
+    width: 68px;
+    height: 68px;
+    background: url("../images/play_btn.png")/*tpa=http://www.cidreroyal.com/images/play_btn.png*/ no-repeat 0 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -39px;
+    z-index: 2;
+}
+.video_block:hover .play_btn,
+.play_btn:hover{background-position: 0 bottom}
+
+/* -------------------- */
+/* Activity             */
+/* -------------------- */
+/*.activity_intro,*/
+.main .activity_intro{
+    /*background-image: url('../images/activity_intro.jpg');*/
+    min-height: 592px;
+    height: auto;
+}
+.main .activity_intro .min_width{height: auto}
+/* BEGIN intro_content */
+.intro_content{
+    height: 422px;
+    padding: 20px 0 0;
+    text-align: center;
+    color: white;
+}
+.intro_content .title{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    font-size: 44px;
+    line-height: 50px;
+    margin: 0 0 -12px;
+}
+.intro_content p{
+    margin: 22px auto;
+    font-size: 20px;
+    line-height: 22px;
+    width: 680px;
+    letter-spacing: 1px;
+}
+.intro_content .h1{color: white;line-height: 30px;margin: -5px 0 0}
+.intro_content .hr{width: 227px;background: #e9ddd0;margin: 25px auto}
+.intro_content .btn_holder{margin: 63px 0 22px}
+.intro_content .btn{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 20px;
+}
+.intro_content .btn.btn_with_icon{margin-left: 61px}
+.intro_content .terms{
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-style: italic;
+}
+.intro_content a{color: white}
+.final_intro .btn_holder{margin-top: 46px}
+/* END intro_content */
+.feast_statistic{
+    color: #413d34;
+    font-weight: bold;
+    margin: 41px 0 0;
+}
+.feast_statistic .deliveries{
+    float: left;
+    padding: 0 0 0 102px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 187px;
+}
+.feast_statistic .deliveries span{
+    float: left;
+    min-width: 88px;
+    text-align: right;
+    font-size: 60px;
+    line-height: 81px;
+    margin: -15px 14px 0 -102px;
+}
+.feast_statistic .deliveries div{
+    overflow: hidden;
+
+}
+.feast_statistic .vhr{
+    float: left;
+    background: #cac8b9;
+    height: 51px;
+    width: 1px;
+    margin: 2px 0 0;
+}
+.feast_statistic .feast{
+    font-size: 16px;
+    line-height: 18px;
+    float: left;
+    padding: 0 0 0 50px;
+    margin: -5px 0 0 50px;
+    text-transform: uppercase;
+}
+.feast_statistic .feast div{
+    font-size: 27px;
+    line-height: 30px;
+    margin: 0 0 -2px;
+}
+.feast_statistic .feast.office{background: url("../images/feast_office.png")/*tpa=http://www.cidreroyal.com/images/feast_office.png*/ no-repeat 3px 5px}
+.feast_statistic .feast.colleague{background: url("../images/feast_colleague.png")/*tpa=http://www.cidreroyal.com/images/feast_colleague.png*/ no-repeat 6px 5px}
+.feast_statistic .btn{
+    float: right;
+    margin: 12px 0 0;
+}
+.feast_statistic.final_statistic .deliveries{padding-left: 152px}
+.feast_statistic.final_statistic .deliveries span{width: 135px;margin-left: -152px}
+/*how_to*/
+.how_to{
+    text-align: center;
+    margin: 45px 0;
+}
+.how_to .h1{}
+.how_to .hr{width: 227px;background: #cccccc;margin: 12px auto}
+.how_to p{
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+}
+.how_to .steps{
+    font-size: 0;
+    line-height: 0;
+    /*background: url('../images/steps.png') no-repeat center 115px;*/
+    margin: 38px 0 0;
+}
+.how_to .step{
+    width: 33.3%;
+    font-size: 15px;
+    line-height: 18px;
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    /*padding: 251px 0 0;*/
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+.how_to .step h3{
+    margin: 0 0 17px;
+}
+/*.how_to .step1{background-image: url('../images/stepsbg3.png');}*/
+/*.how_to .step2{background-image: url('../images/stepsbg2.png');}*/
+/*.how_to .step3{background-image: url('../images/stepsbg1.png');}*/
+
+/*update*/
+.how_to .steps{
+    margin-top: 110px;
+}
+.how_to .step{}
+.how_to .step h3{
+    font-family: Georgia,"Times New Roman", serif;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 26px;
+    text-transform: none;
+    font-weight: normal;
+}
+.how_to .step .hr{
+    font-family: Georgia,"Times New Roman", serif;
+    text-align: center;
+    background: url("../images/steps_hr.png")/*tpa=http://www.cidreroyal.com/images/steps_hr.png*/ no-repeat center;
+    height: auto;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 30px;
+    color: #413d34;
+}
+
+/*office_feasts*/
+.office_feasts{
+    text-align: center;
+    margin: 43px 0;
+}
+.office_feasts .h1{
+    margin: 0 0 35px;
+}
+
+/*card_content*/
+.card_content{
+    margin: 0 0 30px;
+}
+.card_holder{
+    padding: 31px 130px 0;
+}
+.card_holder .h1{
+    text-align: center;
+    margin: -31px 0 15px;
+}
+.card_holder .text{
+    text-align: center;
+    margin: 0 0 51px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+}
+.card{
+    text-align: left;
+    background: #fcfae7;
+    width: 702px;
+    height: 413px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.card_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 328px;
+}
+.card_img img{
+    vertical-align: bottom;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.card_img .card_img_mask{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    z-index: 1;
+}
+.card_footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 24px 0 0;
+    height: 62px;
+}
+.card_person_name{
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #413d34;
+    font-weight: bold;
+    margin: 0 0 0 36px;
+}
+.card_person_company{
+    margin: -4px 0 0 36px;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #c7b884;
+    font-weight: bold;
+}
+.card_bottle{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    position: absolute;
+    right: 48px;
+    bottom: 23px;
+    z-index: 2;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #c7b884;
+    text-align: center;
+    text-transform: uppercase;
+    width: 135px;
+    min-height: 36px
+}
+.card_bottle .title{}
+.card_arrow{
+    cursor: pointer;
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+    margin: 0 0 160px;
+    z-index: 3;
+    width: 9px;
+    height: 18px;
+    background: url("../images/card_arrow.png")/*tpa=http://www.cidreroyal.com/images/card_arrow.png*/ no-repeat 0 0;
+}
+.card_arrow.left{}
+.card_arrow.right{right: auto;left: 100%;background-position: right 0}
+.card_bottle_img{
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    z-index: 1;
+    margin: 0 -47px 6px;
+}
+.card_form{
+    position: relative;
+    z-index: 2;
+    padding: 32px 35px 0;
+    width: 435px;
+}
+.card_form .card_fieldset{}
+.card_form .card_fieldset.error{}
+.card_form .card_error{display: none}
+.card_form .empty_card_error{display: none}
+.card_form .card_fieldset.error .card_error{display: block}
+.card_form .card_fieldset.empty_error .empty_card_error{display: block}
+.card_form .card_fieldset.error .title_symbols,
+.card_form .card_fieldset.error .description_symbols{display: none}
+.card_form .title{
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 48px;
+    font-family: 'pf_din_text_comp_pro';
+    font-weight: bold;
+    margin: 0;
+    padding: 0 0 1px;
+    border: 0;
+    display: block;
+    width: 100%;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.card_form .title .card_label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    top: 4px\9;
+    *top: 3px;
+    z-index: 1;
+    white-space: nowrap;
+}
+.card_form .title textarea{
+    /*text-indent: 113px;*/
+    /**text-indent: 106px;*/
+}
+.card_form .title .inner_text{
+    min-height: 48px;
+    /*text-indent: 113px;*/
+    /**text-indent: 106px;*/
+}
+.card_form .hr{
+    background: #ac9d68;
+    width: 310px;
+    margin: 24px 0 22px;
+}
+.card_form .description{
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 27px;
+    line-height: 27px;
+    font-family: 'pf_din_text_comp_pro';
+    margin: 0 0 6px;
+    padding: 0 0 1px;
+    border: 0;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.card_form .description .inner_text{min-height: 27px}
+.card_form .inner_text{
+    /*visibility: hidden;*/
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.card_form .description textarea,
+.card_form .title textarea{
+    resize: none;
+    outline: none !important;
+    overflow: hidden;
+    display: block;
+    width: 435px;
+    font-family: 'pf_din_text_comp_pro';
+    color: white;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    background: none;
+    border: 0;
+    text-transform: uppercase;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 27px;
+    line-height: 27px;
+}
+.card_form .title textarea{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+}
+.card_form .description.card_error textarea,
+.card_form .title.card_error  textarea{width: 400px;}
+.card_form .card_info_text{
+    font-style: italic;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Georgia,"Times New Roman", serif;
+    margin: -2px 0 0;
+}
+.card_form .card_error, .card_form .empty_card_error{
+    background: url("../images/input_error.png")/*tpa=http://www.cidreroyal.com/images/input_error.png*/ no-repeat 0 center;
+    padding: 0 0 0 35px;
+    width: 400px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.card_form .card_error.title{background-position: 0 9px}
+.card_form .card_error.description{background-position: 0 1px}
+.card .card_nmbr{
+    position: absolute;
+    right: -7px;
+    top: 7px;
+    z-index: 2;
+    background: url("../images/vard_count_people.png")/*tpa=http://www.cidreroyal.com/images/vard_count_people.png*/ no-repeat 7px 5px #c7b884;
+    color: #fcfae7;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    padding: 1px 5px 0 20px;
+    height: 22px;
+}
+.card .card_link{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.card.edit .card_form .inner_text{
+    /*visibility: hidden;*/
+}
+.card.edit .card_form textarea{display: block}
+
+.card.small{
+    width: 310px;
+    height: 183px;
+}
+.card.small .card_form {
+    padding: 16px 15px;
+    width: 207px;
+}
+.card.small .card_form .title{
+    font-size: 18px;
+    line-height: 20px;
+}
+.card.small .card_form .hr{width: 137px;margin: -1px 0 8px}
+.card.small .card_form .description{
+    font-size: 12px;
+    line-height: 15px;
+}
+.card.small .card_footer{
+    padding: 8px 0 0;
+    height: 30px;
+}
+.card.small .card_img{
+    height: 145px;
+}
+.card.small .card_bottle{
+    font-size: 10px;
+    line-height: 10px;
+    right: 20px;
+    bottom: 12px;
+    width: 70px;
+    min-height: 20px;
+}
+.card.small .card_bottle_img{
+    margin: 0 -20px;
+    width: 41px;
+}
+.card.small .card_person_name{
+    font-size: 10px;
+    line-height: 10px;
+    margin: 0 0 0 12px;
+}
+.card.small .card_person_company{
+    font-size: 10px;
+    line-height: 10px;
+    margin: 0 0 0 12px;
+}
+/*card_controls*/
+.card_controls{
+    font-size: 17px;
+    line-height: 18px;
+    margin: 20px 0 0;
+}
+.card_controls p{
+    margin: 0;
+    width: 450px;
+}
+.card_controls .btn_holder{margin: 45px 0 0}
+.card_controls .random{
+    float: right;
+    margin: 7px 0 0;
+}
+
+/*office_team*/
+.office_team{
+    text-align: center;
+    margin: 58px 0 0;
+}
+.office_team .h1{
+    border-bottom: 1px solid #c7b884;
+    padding: 0 0 18px;
+    margin: 0 0 30px;
+}
+.office_team ul{
+    padding: 0;
+    margin: 0 0 0 -75px;
+    list-style: none;
+    overflow: hidden;
+}
+.office_team ul li{
+    float: left;
+    vertical-align: top;
+    width: 131px;
+    height: 190px;
+    margin: 0 0 0 75px;
+}
+.office_team li .title{
+    color: #c7b884;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 12px 0 0;
+}
+.office_team .person{
+    display: block;
+    width: 131px;
+    height: 131px;
+    line-height: 101px;
+    font-size: 94px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: url("../images/default_avatar.png")/*tpa=http://www.cidreroyal.com/images/default_avatar.png*/ no-repeat center #f3f3f3;
+}
+.office_team .person img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.office_team .person .name{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+}
+.office_team .person i{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #4f3a05;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity:0.58;
+    -moz-opacity: 0.58;
+    filter: alpha(opacity=58);
+}
+.share_controls{
+    float: right;
+}
+.copy_link{
+    margin: 0 0 15px;
+    position: relative;
+    z-index: 1;
+}
+.copy_link input{
+    float: left;
+    padding: 3px 14px 6px;
+    width: 190px;
+    margin:  0 10px 0 0;
+    border: 1px solid #ecebea;
+    color: #acacac;
+    font-size: 14px;
+    line-height: 17px;
+    background: #f3f3f3;
+}
+.copy_link .btn{
+    float: left;
+}
+.copy_link .copy_message{
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    text-align: center;
+    width: 141px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 17px;
+    color: #c7b884;
+    margin: 10px 0 0;
+}
+.order_error_text{
+    text-align: center;
+    border-top: 1px solid #ebebeb;
+    margin: 38px 0 -12px;
+    padding: 34px 0 0;
+}
+
+.card_controls.available{}
+.deliveries_left{
+    float: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 0 0 0 80px;
+}
+.deliveries_left div{
+    float: left;
+    font-size: 50px;
+    line-height: 50px;
+    width: 60px;
+    margin: -5px 0 0 -80px;
+    text-align: right;
+}
+.card_controls.invited .share_controls,
+.card_controls.card_ordered_text .share_controls,
+.card_controls.no_available .share_controls,
+.card_controls.available .share_controls{
+    float: none;
+    text-align: center;
+    border-top: 1px solid #ebebeb;
+    padding: 20px 0 0;
+    margin: 32px 0 0;
+}
+.card_controls.invited .social_links,
+.card_controls.card_ordered_text .social_links,
+.card_controls.no_available .social_links,
+.card_controls.available .social_links{
+    display: inline-block;
+    *display: inline;
+    *zoom:1;
+    vertical-align: top;
+    margin: -3px 0 0 10px;
+}
+.card_controls.no_available p{width: 305px}
+.card_controls.no_available .no_delivery{
+    width: 300px;
+    color: #7f7f7f;
+    font-size: 13px;
+    line-height: 16px;
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    float: right;
+}
+.card_controls.no_available .no_delivery div{
+    font-family: 'open_sans', Georgia,"Times New Roman", serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: bold;
+    font-style: normal;
+    color: #413d34;
+    margin: 0 0 11px;
+}
+.card_ordered_text{}
+.congratulations{
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+}
+.congratulations div{
+    font-weight: bold;
+}
+.card_list{
+    margin: 0 0 0 -17px;
+}
+.card_list .card.small{
+    float: left;
+    margin: 0 0 30px 17px;
+}
+.card_controls.invited{}
+.card_controls.invited .btn{padding-left: 20px;padding-right: 20px}
+.own_feast_text{
+    border-top: 1px solid #ebebeb;
+    text-align: center;
+    color: #323232;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 31px 0 0;
+    margin: 29px 0 0;
+}
+.own_feast_text .btn_holder{margin-top: 33px;margin-bottom: 10px}
+.with_card .own_feast_text .btn_holder{margin-top: 4px;}
+.find_out_more{
+    font-size: 14px;
+    line-height: 16px;
+    color: #c7b884;
+    text-decoration: underline !important;
+}
+.find_out_more:hover{color: #323232}
+
+/*participants*/
+.participants{}
+.participants .h1{
+    text-align: center;
+    padding: 0 200px;
+    margin: 0 0 31px;
+}
+.participants_period{
+    float: right;
+    margin: -5px 0 0;
+    width: 123px;
+}
+.participants_period .sel_val{
+    background: url('../images/arrow_down.png') no-repeat right center;
+}
+.participants_period .sel_val span{
+    background: none;
+}
+.participants_toggle{
+    padding: 0 250px;
+    margin: 0 0 68px;
+}
+.participants_toggle .btn{
+    padding: 8px 22px 12px;
+}
+.participants .card_list{}
+.make_own_video{
+    font-style: italic;
+    font-family: Georgia,"Times New Roman", serif;
+    font-size: 16px;
+    line-height: 22px;
+    border-top: 1px solid #f4f1e6;
+    border-bottom: 1px solid #f4f1e6;
+    margin: -28px 0 50px;
+    color: #413d34;
+    padding: 20px 0 22px;
+}
+.make_own_video .btn{
+    float: right;
+    margin: 3px 0 0;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.fb_edge_widget_with_comment{
+    z-index: 4;
+}
+
+.new_steps {
+    padding-top: 53px;
+    font-size: 15px;
+}
+
+.new_steps .new_step {
+    display: block;
+    float: left;
+    line-height: 18px;
+    color: #323232;
+    padding-top: 236px;
+}
+
+.new_steps .step1 {
+    background: url('../images/new_step1.png') no-repeat 88px 0;
+    width: 274px;
+    padding-left: 28px;
+}
+.new_steps .step2 {
+    background: url('../images/new_step2.png') no-repeat 25px 0;
+    width: 288px;
+    padding-left: 14px;
+}
+.new_steps .step3 {
+    background: url('../images/new_step3.png') no-repeat 20px 4px;
+    width: 298px;
+    padding-left: 14px;
+}
+
+.new_step h3{
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+.new_steps .new_step_separator {
+    display: block;
+    padding-top: 100px;
+    float: left;
+    width: 17px;
+}
+
+.new_steps .new_step_separator i{
+    background: url('../images/new_step_separator.png');
+    width: 17px;
+    height: 33px;
+    display: block;
+}
+
+.rules{
+    width: 750px;
+    margin: 0 auto;
+}
+
+.card.edit .random{
+    position: absolute;
+    bottom: 131px;
+    left: 37px;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.default_title{opacity: 0.8}
+
+.wiiner_empty{text-align: center; font-size: 18px}
+
+.language{
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: bold;
+    margin: 0 0 0 -448px;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 10;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.language li{
+    float: left;
+    margin: 0;
+    color: #323232;
+}
+.language li a{
+    color: #323232;
+    text-decoration: none;
+    padding: 7px;
+    margin: 3px 0 ;
+    display: block;
+}
+.language li a:hover{
+    color: #C7B884;
+}
+.language li span{
+    padding: 8px 15px 10px;
+    font-size: 13px;
+    line-height: 16px;
+    background: none repeat scroll 0 0 #FCFAE7;
+    border-radius: 0 0 2px 2px;
+    display: block;
+    margin: 0 13px;
+    cursor: default;
+}
+.language li:first-child span{margin-left: 0}
+
+.main_page .language{}
+.main_page .language a{color: white}
+.main_page .language a:hover{color: #C7B884;}
+
+.pagination{}
+.pagination li{
+    list-style: none;
+    display: inline;
+}
