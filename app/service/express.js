@@ -16,13 +16,14 @@ var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
 
 var logger = require(config.serverRoot + '/service/logger');
+var compression = require('compression');
 var path = require('path');
 module.exports = function (app) {
   app.set('env', config.environment);
-  app.use(express.static(config.clientRoot));
+
   // 日志系统初始化
   logger.init();
-
+  app.use(compression());
   // view engine setup
   app.engine('html', swig.renderFile);
   //app.engine('.html', ejs.__express);
@@ -36,7 +37,7 @@ module.exports = function (app) {
   app.use(bodyParser.urlencoded({extended: false}));
   app.use(cookieParser());
   //app.use(favicon(config.clientRoot + '/favicon.ico'));
-
+  app.use(express.static(config.clientRoot));
 
   var options = {
     "host": config.RD_host,
