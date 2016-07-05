@@ -37,7 +37,10 @@ module.exports = function (app) {
   app.use(bodyParser.urlencoded({extended: false}));
   app.use(cookieParser());
   //app.use(favicon(config.clientRoot + '/favicon.ico'));
-  app.use(express.static(config.clientRoot));
+  app.use(express.static(config.clientRoot,{
+    index: 'index.html',
+    dotfiles: 'deny'
+  }));
 
   var options = {
     "host": config.RD_host,
