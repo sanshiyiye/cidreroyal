@@ -553,7 +553,7 @@ $(document).ready(function() {
 
     if ($('#where-to-buy-city').length) {
         $('#where-to-buy-city .sel_optn').click(function(){
-            window.location.href = '../where-to-buy/index.htm'/*tpa=http://www.cidreroyal.com/where-to-buy/*/+$(this).data('val') + ($('#where-to-buy-city').hasClass('has_map') ? '/map/' : '/');
+            window.location.href = '../where-to-buy/index.html'/*tpa=http://www.cidreroyal.com/where-to-buy/*/+$(this).data('val') + ($('#where-to-buy-city').hasClass('has_map') ? '/map/' : '/');
         });
     }
 
