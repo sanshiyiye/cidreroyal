@@ -86,7 +86,7 @@ BaseDao.prototype.delete = function (entry) {
   if (typeof entry === 'number' || typeof entry === 'string') {
     return this.model.destroy({where: {id: entry}});
   } else {
-    return entry.destory();
+    return entry.destroy();
   }
 };
 

@@ -240,8 +240,12 @@ BaseManager.prototype.delById = function (res, mname, id) {
   var _this = this;
   var mdao = JF.dao[mname + "Dao"];
 
-  var delById = function () {
-    return mdao.delete(id);
+  var getById = function () {
+    return mdao.get(id);
+  };  
+
+  var delEntry = function (entry) {
+    return mdao.delete(entry);
   };
 
   var buildRes = function (entity) {
@@ -255,7 +259,8 @@ BaseManager.prototype.delById = function (res, mname, id) {
     JF.util.http.resBack(res, reData);
   };
 
-  Q.fcall(delById)
+  Q.fcall(getById)
+    .then(delEntry)
     .then(buildRes)
     .catch(JF.util.http.error.bind(null, res));
 };
