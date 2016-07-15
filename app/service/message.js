@@ -25,5 +25,3 @@ exports.UserLogoutBackMsg = require('./../message/msg/UserLogoutBackMsg');
 exports.UserGetUserInfoMsg = require('./../message/msg/UserGetUserInfoMsg');
 
 exports.UserGetUserInfoBackMsg = require('./../message/msg/UserGetUserInfoBackMsg');
-
-exports.UserLoadInitDataMsg = require('./../message/msg/UserLoadInitDataMsg');

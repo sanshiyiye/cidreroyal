@@ -37,7 +37,4 @@ module.exports = {
   // 获取玩家信息返回
   '10210' : 'user/GetUserInfoBack',
   
-  // 获取基础信息
-  '10211' : 'user/LoadInitData',
-  
 };
