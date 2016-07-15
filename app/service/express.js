@@ -22,7 +22,8 @@ module.exports = function (app) {
   app.set('env', config.environment);
 
   // 日志系统初始化
-  logger.init();
+  global.logger = logger.init();
+  
   app.use(compression());
   // view engine setup
   app.engine('html', swig.renderFile);

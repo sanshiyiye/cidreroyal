@@ -5,15 +5,6 @@
 
 'use strict';
 
-exports.AppraiserManager = require(config.serverRoot + '/manager/AppraiserManager');
-exports.BrandManager = require(config.serverRoot + '/manager/BrandManager');
-exports.BrandSeriesManager = require(config.serverRoot + '/manager/BrandSeriesManager');
-exports.CarManager = require(config.serverRoot + '/manager/CarManager');
-exports.CarColorManager = require(config.serverRoot + '/manager/CarColorManager');
-exports.CarEngineManager = require(config.serverRoot + '/manager/CarEngineManager');
-exports.CarImgManager = require(config.serverRoot + '/manager/CarImgManager');
-exports.CarModelManager = require(config.serverRoot + '/manager/CarModelManager');
-exports.CarTypeManager = require(config.serverRoot + '/manager/CarTypeManager');
-exports.CityManager = require(config.serverRoot + '/manager/CityManager');
-exports.TagsManager = require(config.serverRoot + '/manager/TagsManager');
+exports.BlogManager = require(config.serverRoot + '/manager/BlogManager');
 exports.UserInfoManager = require(config.serverRoot + '/manager/UserInfoManager');
+exports.WineManager = require(config.serverRoot + '/manager/WineManager');

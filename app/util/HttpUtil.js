@@ -50,7 +50,7 @@ exports.sessionDes = function (req, res, callback) {
     //移除session之后后续的处理
 
     exports.resBack(res, {});
-  })
+  });
 };
 
 /**

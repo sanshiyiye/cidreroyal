@@ -16,13 +16,18 @@ global.config = require('./config/config');
 // 中间件加载
 require(config.serverRoot + '/service/express')(app);
 
-// JFrame 初始化
-global.JF = require(config.serverRoot + '/core/JFrame');
-JF.init();
-//console.log(JF);
+try {
+  // JFrame 初始化
+  global.JF = require(config.serverRoot + '/core/JFrame');
+  JF.init();
+  //console.log(JF);
 
-// 路由模块加载
-require(config.serverRoot + '/service/routes')(app);
+  // 路由模块加载
+  require(config.serverRoot + '/service/routes')(app);
+}catch(error){
+  console.error(error);
+  logger.error(error);
+}
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -37,6 +42,9 @@ app.use(function (req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function (err, req, res, next) {
+    console.error(err);
+    logger.error(err);
+
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -48,6 +56,9 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function (err, req, res, next) {
+  console.error(err);
+  logger.error(err);
+
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,

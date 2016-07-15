@@ -19,6 +19,7 @@
     "ioredis": "^1.10.0",
     "lodash": "^3.10.1",
     "log4js": "^0.6.27",
+    "moment": "^2.14.1",
     "morgan": "~1.6.1",
     "multiparty": "^4.1.2",
     "mysql": "^2.9.0",
@@ -29,6 +30,7 @@
     "q": "^1.4.1",
     "sequelize": "^3.12.2",
     "serve-favicon": "~2.3.0",
+    "svn-spawn": "^0.1.5",
     "swig": "^1.4.2"
   }
 }

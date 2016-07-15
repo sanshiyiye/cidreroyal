@@ -1,5 +1,5 @@
 /**
- * BrandManager.js
+ * BlogManager.js
  * Created by auto tool.
  */
 
@@ -8,17 +8,17 @@ var util = require('util');
 var BaseManager = require(config.serverRoot + '/manager/base/BaseManager');
 
 /**
- * 品牌信息表管理器
+ * blog信息表管理器
  *
  * @constructor
  */
-var BrandManager = function () {
+var BlogManager = function () {
   var _this = this;
 
 
 };
 
 // 添加继承
-util.inherits(BrandManager, BaseManager);
+util.inherits(BlogManager, BaseManager);
 
-module.exports = new BrandManager();
+module.exports = new BlogManager();

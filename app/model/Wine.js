@@ -1,5 +1,5 @@
 /**
- * Appraiser.js
+ * Wine.js
  * Created by auto tool.
  */
 
@@ -9,7 +9,7 @@ var Sequelize = require('sequelize');
 
 function db_init(sequelize) {
   // 用户信息表
-  var Appraiser = sequelize.define('appraiser', {
+  var Wine = sequelize.define('wine', {
     
       id: {
         type: Sequelize.BIGINT(20),
@@ -22,53 +22,53 @@ function db_init(sequelize) {
         autoIncrement: true,
       },
     
-      title: {
-        type: Sequelize.STRING(30),
+      name: {
+        type: Sequelize.STRING(50),
         allowNull: false,
-        unique: true,
-        field: "title",
-        defaultValue: "",
-        comment: "职称",
-        
-      },
-    
-      telephone: {
-        type: Sequelize.STRING(15),
-        allowNull: false,
-        unique: true,
-        field: "telephone",
+        unique: false,
+        field: "name",
         defaultValue: "0",
-        comment: "手机号",
+        comment: "酒名称",
         
       },
     
-      nickname: {
-        type: Sequelize.STRING(20),
+      content: {
+        type: Sequelize.STRING(50),
         allowNull: true,
         unique: false,
-        field: "nickname",
+        field: "content",
         defaultValue: "",
-        comment: "昵称",
+        comment: "含量信息",
+        
+      },
+    
+      desc: {
+        type: Sequelize.STRING(255),
+        allowNull: true,
+        unique: false,
+        field: "desc",
+        defaultValue: "",
+        comment: "描述",
         
       },
     
       img: {
-        type: Sequelize.STRING(30),
+        type: Sequelize.STRING(100),
         allowNull: true,
         unique: false,
         field: "img",
         defaultValue: "",
-        comment: "头像",
+        comment: "图片名称",
         
       },
     
-      state: {
-        type: Sequelize.INTEGER(30),
+      norm: {
+        type: Sequelize.STRING(100),
         allowNull: true,
         unique: false,
-        field: "state",
-        defaultValue: 0,
-        comment: "状态(0未激活,1已激活)",
+        field: "norm",
+        defaultValue: "",
+        comment: "容量规格(多个规格用半角逗号,分隔)",
         
       },
     
@@ -80,11 +80,11 @@ function db_init(sequelize) {
     ],
   });
 
-  Appraiser.sync();
+  Wine.sync();
 
-  return Appraiser;
+  return Wine;
 }
 
-exports.Appraiser = function (sequelize) {
+exports.Wine = function (sequelize) {
   return db_init(sequelize);
 };

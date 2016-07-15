@@ -1,5 +1,5 @@
 /**
- * City.js
+ * Blog.js
  * Created by auto tool.
  */
 
@@ -9,7 +9,7 @@ var Sequelize = require('sequelize');
 
 function db_init(sequelize) {
   // 用户信息表
-  var City = sequelize.define('city', {
+  var Blog = sequelize.define('blog', {
     
       id: {
         type: Sequelize.BIGINT(20),
@@ -23,32 +23,42 @@ function db_init(sequelize) {
       },
     
       name: {
-        type: Sequelize.STRING(20),
+        type: Sequelize.STRING(100),
         allowNull: false,
         unique: false,
         field: "name",
         defaultValue: "",
-        comment: "城市名称",
+        comment: "blog名称",
         
       },
     
-      area: {
-        type: Sequelize.INTEGER(5),
+      fpart: {
+        type: Sequelize.STRING(255),
         allowNull: true,
         unique: false,
-        field: "area",
-        defaultValue: 0,
-        comment: "区域",
+        field: "fpart",
+        defaultValue: "",
+        comment: "blog第一段信息",
         
       },
     
-      hot: {
-        type: Sequelize.INTEGER(5),
+      bpart: {
+        type: Sequelize.TEXT,
         allowNull: true,
         unique: false,
-        field: "hot",
-        defaultValue: 0,
-        comment: "是否热门(0否，1是)",
+        field: "bpart",
+        defaultValue: "",
+        comment: "blog正文",
+        
+      },
+    
+      img: {
+        type: Sequelize.STRING(100),
+        allowNull: true,
+        unique: false,
+        field: "img",
+        defaultValue: "",
+        comment: "图片名称",
         
       },
     
@@ -56,19 +66,15 @@ function db_init(sequelize) {
     freezeTableName: true,
     timestamps: true,
     indexes: [
-      {
-        unique: false,
-        fields: ['area',]
-      },
       
     ],
   });
 
-  City.sync();
+  Blog.sync();
 
-  return City;
+  return Blog;
 }
 
-exports.City = function (sequelize) {
+exports.Blog = function (sequelize) {
   return db_init(sequelize);
 };

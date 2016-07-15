@@ -7,24 +7,6 @@
 
 module.exports = {
   
-  // 根据条件查询车辆数量
-  '10301' : 'car/QueryCarNum',
-  
-  // 根据条件查询车辆数量返回
-  '10302' : 'car/QueryCarNumBack',
-  
-  // 根据条件查询车辆数量
-  '10303' : 'car/QueryCarList',
-  
-  // 根据条件查询车辆数量返回
-  '10304' : 'car/QueryCarListBack',
-  
-  // 获取车辆详细信息
-  '10305' : 'car/QueryCarInfo',
-  
-  // 根据条件查询车辆数量返回
-  '10306' : 'car/QueryCarInfoBack',
-  
   // 注册
   '10201' : 'user/Register',
   
@@ -57,8 +39,5 @@ module.exports = {
   
   // 获取基础信息
   '10211' : 'user/LoadInitData',
-  
-  // 获取基础信息返回
-  '10212' : 'user/LoadInitDataBack',
   
 };

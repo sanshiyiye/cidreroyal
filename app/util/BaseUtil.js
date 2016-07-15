@@ -25,9 +25,7 @@ exports.errorFilter = function(error){
   var evalue = error.message;
   //console.log(evalue);
   if(!JF.util.check.NonPositiveCheck(evalue)){
-    evalue = JF.enums.ret.INNER_ERROR
-  }else{
-    evalue = parseInt(evalue);
+    evalue = JF.enums.ret.INNER_ERROR;
   }
 
   return evalue;

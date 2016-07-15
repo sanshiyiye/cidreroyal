@@ -21,6 +21,11 @@ var schedule = require(config.serverRoot + '/service/schedule');
 
 // 管理器模块加载
 var ma = require(config.serverRoot + '/service/manager');
+// 手动增加的管理器
+var maEx = require(config.serverRoot + '/service/manager_ex');
+_.forEach(maEx, function (value, key) {
+  ma[key] = value;
+});
 
 // 数据库层模块加载
 var dao = require(config.serverRoot + '/service/dao')(dbs);
@@ -31,7 +36,7 @@ var srv = require(config.serverRoot + '/service/service');
 // 单例实体集合
 function SingleInstance() {
   // 初始化
-  this.init = function(){
+  this.init = function () {
     this.util = util;
     this.enums = enums;
     this.dbs = dbs;
@@ -40,7 +45,7 @@ function SingleInstance() {
     this.ma = ma;
     this.dao = dao;
     this.srv = srv;
-  }
+  };
 }
 
 module.exports = new SingleInstance();

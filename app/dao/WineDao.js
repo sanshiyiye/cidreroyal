@@ -1,5 +1,5 @@
 /**
- * TagsDao.js
+ * WineDao.js
  * Created by auto tool.
  */
 
@@ -8,16 +8,16 @@ var util = require('util');
 var BaseDao = require(config.serverRoot + '/dao/base/BaseDao');
 
 /**
- * 推荐标签信息表数据库层操作类
+ * 酒类型信息表数据库层操作类
  *
  * @constructor
  */
-var TagsDao = function (TagsModel) {
-  this.model = TagsModel;
+var WineDao = function (WineModel) {
+  this.model = WineModel;
 
 };
 
 // 添加继承
-util.inherits(TagsDao, BaseDao);
+util.inherits(WineDao, BaseDao);
 
-module.exports = TagsDao;
+module.exports = WineDao;

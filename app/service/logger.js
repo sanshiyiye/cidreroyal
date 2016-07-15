@@ -26,8 +26,7 @@ log4js.configure({
   ],
   replaceConsole: true,   //替换console.log
   levels:{
-    dateFileLog: 'debug',
-    console: 'info'
+    dateFileLog: 'debug'
   }
 });
 
@@ -46,5 +45,5 @@ exports.init = function(){
   // 添加到express中间件
   app.use(log4js.connectLogger(log, {level:'INFO', format:':method :url'}));
 
-  return log
+  return log;
 };

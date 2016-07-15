@@ -1,5 +1,5 @@
 /**
- * CityDao.js
+ * BlogDao.js
  * Created by auto tool.
  */
 
@@ -8,16 +8,16 @@ var util = require('util');
 var BaseDao = require(config.serverRoot + '/dao/base/BaseDao');
 
 /**
- * 城市信息表数据库层操作类
+ * blog信息表数据库层操作类
  *
  * @constructor
  */
-var CityDao = function (CityModel) {
-  this.model = CityModel;
+var BlogDao = function (BlogModel) {
+  this.model = BlogModel;
 
 };
 
 // 添加继承
-util.inherits(CityDao, BaseDao);
+util.inherits(BlogDao, BaseDao);
 
-module.exports = CityDao;
+module.exports = BlogDao;
