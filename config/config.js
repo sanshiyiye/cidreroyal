@@ -32,7 +32,7 @@ module.exports = {
   srvPricePercent: 0.03,
 
   // 数据库相关参数
-  DB_dbname: 'jframe',
+  DB_dbname: 'cidreroyal',
   DB_username: 'root',
   DB_password: '',
   DB_host: 'localhost',

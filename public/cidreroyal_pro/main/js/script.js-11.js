@@ -1,3 +1,5 @@
+var jf_img_path = 'http://localhost:3333/';
+
 var duration = 400;
 var visible_popup = '';
 var document_scroll;
@@ -557,10 +559,64 @@ $(document).ready(function() {
         });
     }
 
-    if( $('#product-slider-inner').length ){
-        initProductInnerSlider($('#product-slider-inner'));
-    }
+    $.post("/game", {
+        msgType: 10301,
+    },
+        function (data, status) {
+            if ('success' == status) {
+                var ret = data.ret;
 
+                // 请求数据成功
+                if (0 == ret) {
+                    var wines = data.wineList;
+                    // console.log(wines);
+                    // 遍历所有酒类
+                    for (var i = 0; i < wines.length; i++) {
+                        // 进行数据添加
+                        var wine = wines[i];
+
+                        var item = $("<div class='slider_item'></div>");
+
+                        // 图片        
+                        var imgPath = jf_img_path + 'files/wine/' + wine.img;
+                        var itemImg = "<img class='item_img' src='" + imgPath + "' />";
+
+                        // 正文
+                        var itemContent = $("<div class='item_info'></div>");
+                        var itemTitle = $("<div class='sub_title'></div>").text(wine.name);
+                        var itemSubtitle = $("<div class='sub_title'></div>").text(wine.content);
+                        var itemDesc = $("<p></p>").append(wine.desc);
+
+
+                        item.append(itemImg, itemContent);
+                        itemContent.append(itemTitle, itemSubtitle, itemDesc);
+
+
+                        // 规格信息 例：1_0.7L,2_20-30L,
+                        var norms = wine.norm.split(',');
+                        for (var j = 0; j < norms.length; j++) {
+                            var norminfo = norms[j];
+                            if ('' != norminfo) {
+                                var norm = norminfo.split('_');
+
+                                var itemNorm = $("<div class='bottle" + norm[0] + "'><br /></div>");
+                                var itemNormtext = $("<b></b>").text(norm[1]);
+
+                                itemNorm.append(itemNormtext);
+                                item.append(itemNorm);
+                            }
+                        }
+
+                        $("#wineRoyal").append(item);
+                    }
+                }
+            }
+
+            if ($('#product-slider-inner').length) {
+                initProductInnerSlider($('#product-slider-inner'));
+            }
+        });
+    
     // video block
     if( $('.video_block').length ){
         $('.video_block').click(function(){

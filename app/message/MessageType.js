@@ -7,6 +7,12 @@
 
 module.exports = {
   
+  // 获取博客信息
+  '10401' : 'blog/GetBlogList',
+  
+  // 获取博客信息返回
+  '10402' : 'blog/GetBlogListBack',
+  
   // 注册
   '10201' : 'user/Register',
   
@@ -36,5 +42,11 @@ module.exports = {
   
   // 获取玩家信息返回
   '10210' : 'user/GetUserInfoBack',
+  
+  // 获取酒类信息
+  '10301' : 'wine/GetWineList',
+  
+  // 获取酒类信息返回
+  '10302' : 'wine/GetWineListBack',
   
 };

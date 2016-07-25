@@ -6,6 +6,10 @@
 'use strict';
 
 
+exports.BlogGetBlogListMsg = require('./../message/msg/BlogGetBlogListMsg');
+
+exports.BlogGetBlogListBackMsg = require('./../message/msg/BlogGetBlogListBackMsg');
+
 exports.UserRegisterMsg = require('./../message/msg/UserRegisterMsg');
 
 exports.UserRegisterBackMsg = require('./../message/msg/UserRegisterBackMsg');
@@ -25,3 +29,7 @@ exports.UserLogoutBackMsg = require('./../message/msg/UserLogoutBackMsg');
 exports.UserGetUserInfoMsg = require('./../message/msg/UserGetUserInfoMsg');
 
 exports.UserGetUserInfoBackMsg = require('./../message/msg/UserGetUserInfoBackMsg');
+
+exports.WineGetWineListMsg = require('./../message/msg/WineGetWineListMsg');
+
+exports.WineGetWineListBackMsg = require('./../message/msg/WineGetWineListBackMsg');

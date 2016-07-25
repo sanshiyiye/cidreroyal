@@ -132,6 +132,6 @@ exports.error = function (res, msgData, error) {
     console.error(error);
     //logger.error(error);
   }
-  msgData.setResult(errorCode);
+  msgData.setResult(parseInt(errorCode));
   JF.util.http.resBack(res, msgData);
 };
