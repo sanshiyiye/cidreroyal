@@ -1,5 +1,3 @@
-var jf_img_path = 'http://localhost:3333/';
-
 var duration = 400;
 var visible_popup = '';
 var document_scroll;
@@ -559,6 +557,7 @@ $(document).ready(function() {
         });
     }
 
+    // 酒类信息获取    
     $.post("/game", {
         msgType: 10301,
     },
@@ -578,7 +577,7 @@ $(document).ready(function() {
                         var item = $("<div class='slider_item'></div>");
 
                         // 图片        
-                        var imgPath = jf_img_path + 'files/wine/' + wine.img;
+                        var imgPath = '/files/wine/' + wine.img;
                         var itemImg = "<img class='item_img' src='" + imgPath + "' />";
 
                         // 正文
@@ -595,6 +594,7 @@ $(document).ready(function() {
                         // 规格信息 例：1_0.7L,2_20-30L,
                         var norms = wine.norm.split(',');
                         for (var j = 0; j < norms.length; j++) {
+                            console.log(norms[j]);
                             var norminfo = norms[j];
                             if ('' != norminfo) {
                                 var norm = norminfo.split('_');
@@ -603,6 +603,7 @@ $(document).ready(function() {
                                 var itemNormtext = $("<b></b>").text(norm[1]);
 
                                 itemNorm.append(itemNormtext);
+                                console.log(itemNorm);
                                 item.append(itemNorm);
                             }
                         }

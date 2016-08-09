@@ -30,6 +30,9 @@ _.forEach(maEx, function (value, key) {
 // 数据库层模块加载
 var dao = require(config.serverRoot + '/service/dao')(dbs);
 
+// sdk模块加载
+var sdk = require(config.serverRoot + '/sdk/sdk');
+
 // 其他服务模块加载
 var srv = require(config.serverRoot + '/service/service');
 
@@ -45,6 +48,7 @@ function SingleInstance() {
     this.ma = ma;
     this.dao = dao;
     this.srv = srv;
+    this.sdk = sdk;
   };
 }
 
