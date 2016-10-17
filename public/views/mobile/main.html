@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="css/mobile/base2013.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile/index.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile/common.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile/all_html5.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile/chapter.css" />
+
+<header style="position: fixed;top: 0px;width: 100%;z-index: 9999;" ng-controller="headerCtrl">
+  <h1 id="logo"><a ui-sref='main/home'>
+                <img src="/images/mobile/logo.jpg" alt="味多美">
+            </a></h1>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <p class="loginbox"><a ui-sref='login'>登录</a> | <a ui-sref='register'>注册</a></p>
+</header>
+<div style="padding-top: 51px;"></div>
+<div>
+  <!--div class="new-jd-logo" style="background-color:#9b2034;">
+                <div style="width:106px; height:40px; margin:0 0 0 34%;">
+                    <a href="index.php">
+                        <img src="/images/logo.png"/>
+                    </a>
+                </div>
+             </div-->
+  <div class="new-header">
+    <a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a>
+    <h2>用户登录</h2>
+    <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span>京东键</span></a>
+  </div>
+  <div class="new-jd-tab" style="display:none" id="jdkey">
+    <div class="new-tbl-type">
+      <a href="index.php" class="new-tbl-cell"> <span class="icon">首页</span>
+        <p style="color:#6e6e6e;">首页</p>
+      </a>
+      <a href="category.php" class="new-tbl-cell"> <span class="icon2">分类搜索</span>
+        <p style="color:#6e6e6e;">分类搜索</p>
+      </a>
+      <a href="flow.php" id="html5_cart" class="new-tbl-cell"> <span class="icon3">购物车</span>
+        <p style="color:#6e6e6e;">购物车</p>
+      </a>
+      <a href="user.php?act=user_center" class="new-tbl-cell"> <span class="icon4">会员中心</span>
+        <p style="color:#6e6e6e;">会员中心</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div ui-view></div>
+
+
+<div class="new-footer clear">
+  <div class="new-f-section">
+    <a href="kefu.php">{{'BASE.CONTACT'|i18n}}</a>
+    <a href="company_service.php">{{'BASE.COMPANY'|i18n}}</a>
+  </div>
+  <div class="new-f-section2">{{'BASE.COPYRIGHT'|i18n}}
+    <img src="http://c.cnzz.com/wapstat.php?siteid=1255734072&r=&rnd=275526573" width="0" height="0" />
+  </div>
+</div>
+
+
+<footer class="footermenu" style="height:10%;" ng-controller="footerCtrl">
+  <ul class="tablist">
+    <li class="m1 cur">
+      <a href="index.php">{{ 'BASE.HOME_TAG'|i18n }}</a>
+    </li>
+    <li class="m2">
+      <a href="category_all.php">{{ 'BASE.CATEGORY_TAG'|i18n }}</a>
+    </li>
+    <li class="m3">
+      <a href="flow.php">{{ 'BASE.CART_TAG'|i18n }}</a>
+    </li>
+    <li class="m4">
+      <a href="user.php?act=user_center">{{ 'BASE.USER_TAG'|i18n }}</a>
+    </li>
+  </ul>
+</footer>

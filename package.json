@@ -31,6 +31,7 @@
     "sequelize": "^3.12.2",
     "serve-favicon": "~2.3.0",
     "svn-spawn": "^0.1.5",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "urllib": "^2.13.0"
   }
 }

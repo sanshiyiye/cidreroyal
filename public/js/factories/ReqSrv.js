@@ -2,25 +2,27 @@
  * Created by gaojun on 15/11/23.
  */
 
-define([
-    'angular',
+define(
+  [
+    'config',
     'lodash',
-    'config'
+
+    '../util/reqMsg',
   ],
-  function (angular, _, config) {
+  function (config, _, reqMsg) {
     'use strict';
 
-    var module = angular.module(config.name);
-    module.factory('reqSrv', function ($http) {
-      return {
-        // login request
-        login: function (username, password) {
-          return $http.post('/login', {username: username, password: password});
-        },
-        // logout request
-        logout: function (username, accesstoken) {
-          return $http.post('/login', {username: username, accesstoken: accesstoken});
-        },
-      }
-    });
-  });
+    return ['$http', function ($http) {
+      var host = config.local_url;
+
+      var msgData = reqMsg($http);
+
+      // get i18n lang file
+      msgData.getLang = function (lang) {
+        return $http.post('/js/cfg/i18n/' + lang + '.json');
+      };
+
+      return msgData;
+    }];
+  }
+);

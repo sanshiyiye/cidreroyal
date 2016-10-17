@@ -22,7 +22,7 @@ BaseManager.prototype.queryParam = {};
  * @param query 查询条件数据
  * @return {{}}
  */
-BaseManager.prototype.getListPre = function(query){
+BaseManager.prototype.getListPre = function (query) {
   return query;
 };
 
@@ -38,6 +38,7 @@ BaseManager.prototype.getListPre = function(query){
  * @param _order 排序方式
  */
 BaseManager.prototype.getList = function (res, query, mname, _page, _perPage, _sort, _order) {
+  var _this = this;
   var mdao = JF.dao[mname + "Dao"];
 
   // 查询条件处理
@@ -54,26 +55,27 @@ BaseManager.prototype.getList = function (res, query, mname, _page, _perPage, _s
       qp[key] = param;
     }
   });
-  qp = this.getListPre(qp);
 
   // 根据条件查询数据
-  var queryList = function () {
+  var queryList = function (count) {
+    res.setHeader('Total_Count', count);
     return mdao.queryList(qp, false, _page, _perPage, _sort, _order);
   };
 
   // 根据条件查询数据
-  var queryCount = function () {
-    return mdao.queryCount(query);
+  var queryCount = function (newQuery) {
+    qp = newQuery;
+    return mdao.queryCount(qp);
   };
 
-  var buildList = function (list, count) {
-    res.setHeader('Total_Count', count);
-
+  var buildList = function (list) {
     JF.util.http.resBack(res, list);
   };
 
-  Q.all([queryList(), queryCount()])
-    .spread(buildList)
+  Q.fcall(this.getListPre.bind(null, qp))
+    .then(queryCount)
+    .then(queryList)
+    .then(buildList)
     .catch(JF.util.http.error.bind(null, res));
 };
 
@@ -84,7 +86,7 @@ BaseManager.prototype.getList = function (res, query, mname, _page, _perPage, _s
  * @param newData 请求数据
  * @return {{}}
  */
-BaseManager.prototype.addNewPre = function(newData){
+BaseManager.prototype.addNewPre = function (newData) {
   return newData;
 };
 
@@ -106,15 +108,14 @@ BaseManager.prototype.addNew = function (res, reqData, mname) {
       newData[key] = value;
     }
   });
-  newData = this.addNewPre(newData);
 
   // 新增数据
-  var addNew = function () {
+  var addNew = function (ndata) {
 
-    var entity = model.build(newData);
+    var entity = model.build(ndata);
 
     // 保存
-    return mdao.save(fsfs);
+    return mdao.save(entity);
   };
 
   var addRes = function (entity) {
@@ -122,7 +123,8 @@ BaseManager.prototype.addNew = function (res, reqData, mname) {
     JF.util.http.resBack(res, entity.dataValues);
   };
 
-  Q.fcall(addNew)
+  Q.fcall(this.addNewPre.bind(null, newData))
+    .then(addNew)
     .then(addRes)
     .catch(JF.util.http.error.bind(null, res));
 };
@@ -134,7 +136,7 @@ BaseManager.prototype.addNew = function (res, reqData, mname) {
  * @param reData
  * @return {*}
  */
-BaseManager.prototype.getByIdSuf = function(reData){
+BaseManager.prototype.getByIdSuf = function (reData) {
   return reData;
 };
 
@@ -157,16 +159,18 @@ BaseManager.prototype.getById = function (res, mname, id) {
     var reData = {};
     if (!_.isUndefined(entity) && !_.isNull(entity)) {
       reData = entity.dataValues;
-
-      // 查询数据处理
-      reData = _this.getByIdSuf(reData);
     }
 
+    return _this.getByIdSuf(reData);
+  };
+
+  var reBack = function (reData) {
     JF.util.http.resBack(res, reData);
   };
 
   Q.fcall(getById)
     .then(buildRes)
+    .then(reBack)
     .catch(JF.util.http.error.bind(null, res));
 };
 
@@ -177,7 +181,7 @@ BaseManager.prototype.getById = function (res, mname, id) {
  * @param upData 更新数据
  * @return {{}}
  */
-BaseManager.prototype.updatePre = function(upData){
+BaseManager.prototype.updatePre = function (upData) {
   return upData;
 };
 
@@ -193,14 +197,13 @@ BaseManager.prototype.update = function (res, reqData, mname, id) {
   var _this = this;
   var mdao = JF.dao[mname + "Dao"];
 
-  var getById = function () {
+  var getById = function (qData) {
+    reqData = qData;
     return mdao.get(id);
   };
 
   var modifyEntity = function (entity) {
     if (!_.isUndefined(entity) || !_.isNull(entity)) {
-      // 更新前数据处理
-      reqData = _this.updatePre(reqData);
       // 更新
       return mdao.update(entity, reqData);
     } else {
@@ -212,7 +215,8 @@ BaseManager.prototype.update = function (res, reqData, mname, id) {
     JF.util.http.resBack(res, entity);
   };
 
-  Q.fcall(getById)
+  Q.fcall(this.updatePre.bind(null, reqData))
+    .then(getById)
     .then(modifyEntity)
     .then(sucUpdate)
     .catch(JF.util.http.error.bind(null, res));
@@ -225,7 +229,7 @@ BaseManager.prototype.update = function (res, reqData, mname, id) {
  * @param delData 删除数据
  * @return {{}}
  */
-BaseManager.prototype.delByIdSuf = function(delData){
+BaseManager.prototype.delByIdSuf = function (delData) {
   return delData;
 };
 
@@ -242,7 +246,7 @@ BaseManager.prototype.delById = function (res, mname, id) {
 
   var getById = function () {
     return mdao.get(id);
-  };  
+  };
 
   var delEntry = function (entry) {
     return mdao.delete(entry);
@@ -254,14 +258,17 @@ BaseManager.prototype.delById = function (res, mname, id) {
       reData = entity.dataValues;
     }
 
-    reData = _this.delByIdSuf(reData);
+    return _this.delByIdSuf(reData);
+  };
 
+  var reBack = function (reData) {
     JF.util.http.resBack(res, reData);
   };
 
   Q.fcall(getById)
     .then(delEntry)
     .then(buildRes)
+    .then(reBack)
     .catch(JF.util.http.error.bind(null, res));
 };
 

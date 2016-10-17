@@ -1,23 +1,32 @@
-/**
- * Created by gaojun on 15/11/19.
- */
+define([
+  'angular',
+  'config',
+],
+  function (angular, config) {
+    var module = angular.module(config.name + '.routes', []);
 
-define([], function () {
-  return {
-    home: {
-      title: 'Home',
-      route: '/home',
-      controller: '',
-      templateUrl: 'base/home.html',
-    },
+    module.config(['$stateProvider', '$urlRouterProvider',
+      function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+          .state('main', {
+            cache: false,
+            url: '/main',
+            templateUrl: 'views/mobile/main.html',
+            controller: 'mainCtrl'
+          })
+          .state('main/home', {
+            parent: 'main',
+            url: '/home',
+            templateUrl: 'views/mobile/home.html',
+            controller: 'homeCtrl',
+            params: {},
+          })
+          ;
 
-    login: {
-      title: 'Login',
-      route: '/login',
-      controller: '',
-      templateUrl: 'views/base/login.html',
-    },
+        // if none of the above states are matched, use this as the fallback
+        $urlRouterProvider.otherwise('/main');
+      }]);
+  }
+);
 
 
-  };
-})

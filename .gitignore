@@ -4,3 +4,4 @@ node_modules/
 logs/*
 public/vendor/*
 .vscode/
+.DS_Store

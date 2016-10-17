@@ -1,57 +1,101 @@
 /**
- * Created by gaojun on 15/11/17.
+ * Created by gaojun on 15/11/26.
  */
 
-'use strict';
-
-require.config({
-  baseUrl: './',
+/**
+ * 通过requirejs进行js加载
+ * 为方便后期打包剔除多余的js
+ * (特别是打包需要使用压缩和混淆后的js)
+ * 所有vendor下的js必须通过此文件进行引用
+ */
+requirejs.config({
+  baseUrl: 'js',
 
   paths: {
-    config: '/cfg/config',
-    lang: '/cfg/lang',
+    config: './cfg/config',
+    lang: './cfg/lang',
+    //enums: './enum/Enum',
+    sprintf: './util/sprintf',
 
-    vendor: '/vendor',
-    angular: '/vendor/angular/angular',
-    'angular-route': '/vendor/angular-route/angular-route',
-    'angular-cookies': '/vendor/angular-cookies/angular-cookies',
-    'angular-bootstrap': '/vendor/angular-bootstrap/ui-bootstrap',
+    tweenMax: '../vendor/gsap/src/minified/TweenMax.min',
 
-    lodash: '/js/components/lodash.extended',
-    'lodash-src': '/vendor/lodash/lodash',
-    bootstrap: '/vendor/bootstrap/dist/js/bootstrap',
+    lodash: '../vendor/lodash/lodash',//.min',
+    angular: '../vendor/angular/angular',//.min',
+    // angularAnimate: '../vendor/angular-animate/angular-animate',//.min',
+    angularResource: '../vendor/angular-resource/angular-resource',//.min',
+    angularSanitize: '../vendor/angular-sanitize/angular-sanitize',//.min',
+    uiRouter: '../vendor/angular-ui-router/release/angular-ui-router',//.min',
+    ngCookies: '../vendor/angular-cookies/angular-cookies',//.min',
+    ngHttpAuth: '../vendor/angular-http-auth/src/http-auth-interceptor',
+    ngLocalStorage: '../vendor/angular-local-storage/dist/angular-local-storage',//.min',
+    ngAnimate: '../vendor/angular-animate/angular-animate',//.min',
+    ngFx: '../vendor/ngFx/dist/ngFx',//.min',
 
-    jquery: '/vendor/jquery/dist/jquery',
+    jquery: '../vendor/jquery/dist/jquery',//.min',
+
+    wowslider: './components/wowslider',
+    wowsliderscript: './components/wowslider-script',
   },
+
   shim: {
     angular: {
-      deps: ['jquery', 'config'],
       exports: 'angular'
     },
 
-    'angular-route': {
-      deps: ['angular'],
-      exports: 'angular-route'
-    },
-
-    'angular-bootstrap': {
-      deps: ['angular'],
-      exports: 'angular-bootstrap'
-    },
-
-    'angular-cookies': {
-      deps: ['angular'],
-      exports: 'angular-cookies'
-    },
-
-    bootstrap: {
+    wowslider: {
       deps: ['jquery']
     },
 
-    jquery: {
-      exports: 'jQuery'
+    wowsliderscript: {
+      deps: ['jquery', 'wowslider']
     },
+
+    // angularAnimate: {
+    //   deps: ['angular']
+    // },
+
+    angularResource: {
+      deps: ['angular']
+    },
+
+    angularSanitize: {
+      deps: ['angular']
+    },
+
+    uiRouter: {
+      deps: ['angular']
+    },
+
+    ngCookies: {
+      deps: ['angular']
+    },
+
+    ngHttpAuth: {
+      deps: ['angular']
+    },
+
+    ngLocalStorage: {
+      deps: ['angular']
+    },
+
+    ngAnimate: {
+      deps: ['angular']
+    },
+
+    ngFx: {
+      deps: [
+        'ngAnimate',
+        'tweenMax'
+      ]
+    },
+
   },
+
+  priority: [
+    'angular',
+  ],
+
   waitSeconds: 60,
+
   //urlArgs: "bust=" + (new Date()).getTime(),  //防止读取缓存，调试用
 });

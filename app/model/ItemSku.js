@@ -22,26 +22,6 @@ function db_init(sequelize) {
         autoIncrement: true,
       },
     
-      itemName: {
-        type: Sequelize.STRING(100),
-        allowNull: false,
-        unique: false,
-        field: "itemName",
-        defaultValue: "",
-        comment: "商品名称",
-        
-      },
-    
-      itemDec: {
-        type: Sequelize.STRING(255),
-        allowNull: false,
-        unique: false,
-        field: "itemDec",
-        defaultValue: "",
-        comment: "商品描述",
-        
-      },
-    
       oldPrice: {
         type: Sequelize.DOUBLE(10, 3),
         allowNull: false,
@@ -123,7 +103,7 @@ function db_init(sequelize) {
       },
     
       brandId: {
-        type: Sequelize.DOUBLE(20, 3),
+        type: Sequelize.BIGINT(20),
         allowNull: false,
         unique: false,
         field: "brandId",
@@ -133,7 +113,7 @@ function db_init(sequelize) {
       },
     
       itemId: {
-        type: Sequelize.DOUBLE(20, 3),
+        type: Sequelize.BIGINT(20),
         allowNull: false,
         unique: false,
         field: "itemId",

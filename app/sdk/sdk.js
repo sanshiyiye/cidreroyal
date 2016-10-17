@@ -5,3 +5,5 @@
 'use strict';
 
 exports.wechat = require(config.serverRoot + '/sdk/wechat/WechatSdk');
+
+exports.ali = require(config.serverRoot + '/sdk/ali/AliSdk');

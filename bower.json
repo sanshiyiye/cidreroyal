@@ -24,6 +24,13 @@
     "angular-bootstrap": "~0.14.3",
     "requirejs": "~2.1.20",
     "lodash": "~3.10.1",
-    "angular-cookies": "~1.4.7"
+    "angular-http-auth": "~1.2.3",
+    "angular-local-storage": "~0.2.3",
+    "angular-cookies": "~1.4.7",
+    "animate.css": "~3.4.0",
+    "ngFx": "~1.1.0",
+    "angular-resource": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
   }
 }

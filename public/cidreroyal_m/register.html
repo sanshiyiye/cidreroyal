@@ -1,0 +1,562 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>注册 - 味多美手机商城</title>         
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="author" content="ecy.cc"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0"> 
+        <meta name="apple-touch-fullscreen" content="yes"> 
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+        <meta name="format-detection" content="telephone=no"> 
+        <link rel="stylesheet" type="text/css" href="style/base2013.css" /> 
+        <link rel="stylesheet" type="text/css" href="style/all_html5.css" /> 
+        <link rel="stylesheet" type="text/css" href="style/chapter.css" /> 
+        <script src="js/jquery-1.6.2.min.js" type="text/javascript"></script>         
+        <script src="js/common1.js" type="text/javascript"></script>         
+        <script type="text/javascript">
+	function submit(obj){
+		obj.submit();
+	}
+	function check(theForm){
+		if(theForm.mobile_phone.value == ""){
+			alert("请输入手机号!");theForm.mobile_phone.focus();return false;
+		}else if(verifymobile(theForm.mobile_phone.value) == false){
+			alert('请填写正确的手机号码');theForm.mobile_phone.focus();return false;
+		}
+		if(theForm.mCode.value == "" || theForm.mCode.value.length != 4){
+			alert("请输入正确手机验证码!");theForm.mCode.focus();return false;
+		}
+		if(theForm.password1.value == "" || theForm.password1.value.length < 6){
+			alert("请输入不少于6位登录密码!");theForm.password1.focus();return false;
+		}else{
+			  var m=0;
+			  var Modes = 0;
+			  for (i=0; i<theForm.password1.value.length; i++)
+			  {
+				var charType = 0;
+				var t = theForm.password1.value.charCodeAt(i);
+				if (t>=48 && t <=57)
+				{
+				  charType = 1;
+				}
+				else if (t>=65 && t <=90)
+				{
+				  charType = 2;
+				}
+				else
+				{
+				  charType = 4;	
+				}
+				Modes |= charType;
+			  }
+			
+			  for (i=0;i<4;i++)
+			  {
+				if (Modes & 1) m++;
+				  Modes>>>=1;
+			  }
+			
+			  if(m<2)
+			  {
+				 alert("密码太简单!");theForm.password1.focus();return false;
+			  }
+		}
+		if(theForm.confirm_password.value == "" || theForm.confirm_password.value!=theForm.password1.value){
+			alert("请输入正确确认密码！");theForm.confirm_password.focus();return false;
+		}
+		theform.submit();
+	}
+var process_request = "";
+
+function add_num(rec_id,goods_id){
+	document.getElementById("goods_number_"+rec_id+"").value++;
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+	//Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+	Ajax.call('flow.php?step=update_group_cart', 'rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+
+}
+
+function red_num(rec_id,goods_id){
+	if (document.getElementById("goods_number_"+rec_id+"").value>1){
+		document.getElementById("goods_number_"+rec_id+"").value--;
+	}
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+	Ajax.call('flow.php', 'step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function change_price(rec_id,goods_id){
+	var number = document.getElementById("goods_number_"+rec_id+"").value;
+	Ajax.call('flow.php','step=update_group_cart&rec_id=' + rec_id +'&number=' + number+'&goods_id=' + goods_id, changePriceResponse, 'GET', 'JSON');
+}
+
+function changePriceResponse(result){
+	if(result.error == 1){
+		alert(result.content);
+		document.getElementById("goods_number_"+result.rec_id+"").value =result.number;
+	}else{
+		document.getElementById('subtotal_'+result.rec_id).innerHTML = result.subtotal;//商品总价
+		document.getElementById('cart_amount_desc').innerHTML = result.cart_amount_desc;//购物车商品总价说明
+	}
+}
+
+function verifymobile(mobile){
+	var phone = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+		if(!phone.test(mobile)){
+			return false
+		}
+}
+
+$(function(){
+	//显示图片验证码
+	$("#get_phoneyzm").click(function(){
+		$("#box_bd_yzm").css('display','block');
+		$("#code").attr('src','captcha.php?sms_login=1&' + Math.random());
+	});
+})
+
+//验证码
+function sendSms(){
+	var mobile = $("#mobile_phone").val();
+	var pic_code = $("#cp").val();
+		if(verifymobile(mobile) == false){
+			alert('请填写正确的手机号码')
+			return false
+		}
+		$.ajax({
+			type:"post",
+			url:"user.php?act=MobileVerif",
+			data:"mobile="+mobile+"&pic_code="+pic_code+"&is_ex=1",
+			dataType:"json",
+			success:function(data){
+				if(data.error == 0){
+					$("#MobileCode").show();
+					$("#mlog").removeAttr("disabled")
+					$("#mlog").removeClass('hui');
+					$("#get_phoneyzm").attr("disabled","false");
+					//倒计时60秒
+					 var wait = 60;
+					 $("#get_phoneyzm").val((--wait) + "秒后重新发送");
+					 var time_line = setInterval(function(){
+						 if(wait == 0)
+						 {
+							 $("#get_phoneyzm").removeAttr("disabled");
+							 $("#get_phoneyzm").val("获取手机验证码");
+							 return clearInterval(time_line);
+						 }
+						 else
+						 {
+							 $("#get_phoneyzm").val((--wait) + "秒后重新发送");
+						 }		
+						 },1000);
+						 $("#box_bd_yzm").css('display','none');
+				}else{
+					alert(data.msg);
+					$("#MobileCode").hide();
+				}
+			}
+		})
+}
+//手机号验证
+function verifymobile(mobile){
+	var phone = /^13[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$/;
+		if(!phone.test(mobile)){
+			return false
+		}
+}
+function exisitMoblie(mobile){
+	if(verifymobile(mobile) == false){
+		alert('请填写正确的手机号码')
+		return false
+	}else{
+		$.ajax({
+		type:"post",
+		url:"user.php?act=is_exisit",
+		data:"mobile="+mobile,
+		dataType:"json",
+		success:function(data){
+					if(data){
+						alert(data.msg);
+					}
+			}
+		})
+	}
+}
+
+</script>         
+    </head>     
+    <body> 
+        <a name="top"></a> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <link rel="stylesheet" type="text/css" href="style/common.css" /> 
+        <script type="text/javascript">
+var process_request = "";
+</script>         
+        <a name="top"></a> 
+        <!--header>
+		<div class="new-jd-logo" style="background-color:#9b2034;">
+        	<div style="width:106px; height:40px; margin:0 0 0 33%;">
+                <a href="index.php">
+                    <img src="http://m.wdmcake.cn/images/logo.png"/>
+                </a>
+           	</div>
+		</div>
+</header-->         
+        <header style="position: fixed;top: 0px;width: 100%;z-index: 9999;"> 
+            <h1 id="logo"><a href="index.php">
+                    <img src="/images/logo.jpg" alt="味多美">
+                </a></h1> 
+            <!--select name="" id="citys"><option value="1">北京▼</option></select-->             
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+            <div class="seat"> 
+                <div>北京</div>                 
+                <div class="area" style="display:none;"> 
+                    <div>
+                        <a href="http://m.wdmcake.cn/city.php?city_id=1">北京</a>
+                    </div>                     
+                    <div>
+                        <a href="http://m.wdmcake.cn/city.php?city_id=2">上海</a>
+                    </div>                     
+                </div>                 
+                <script type="text/javascript">
+	$(function(){
+		$('.seat,.area').hover(
+			function(){
+				$('.area').css("display","inline");
+			},
+			function(){
+				$('.area').css("display","none");
+			}
+		);
+	});
+</script>                 
+            </div>             
+            <p class="loginbox"><a href="user.php?act=login">登录</a> | <a href="user.php?act=register">注册</a></p> 
+        </header>         
+        <div style="padding-top: 51px;"></div>
+        <div> 
+            <!--div class="new-jd-logo" style="background-color:#9b2034;">
+                <div style="width:106px; height:40px; margin:0 0 0 34%;">
+                    <a href="index.php">
+                        <img src="/images/logo.png"/>
+                    </a>
+                </div>
+             </div-->             
+            <div class="new-header"> 
+                <a href="javascript:pageBack();" class="new-a-back"><span>返回</span></a> 
+                <h2>用户注册</h2> 
+                <a href="javascript:void(0)" id="btnJdkey" class="new-a-jd"><span>京东键</span></a> 
+            </div>             
+            <div class="new-jd-tab" style="display:none" id="jdkey"> 
+                <div class="new-tbl-type"> 
+                    <a href="index.php" class="new-tbl-cell"> <span class="icon">首页</span> <p style="color:#6e6e6e;">首页</p> </a> 
+                    <a href="category.php" class="new-tbl-cell"> <span class="icon2">分类搜索</span> <p style="color:#6e6e6e;">分类搜索</p> </a> 
+                    <a href="flow.php" id="html5_cart" class="new-tbl-cell"> <span class="icon3">购物车</span> <p style="color:#6e6e6e;">购物车</p> </a> 
+                    <a href="user.php?act=user_center" class="new-tbl-cell"> <span class="icon4">会员中心</span> <p style="color:#6e6e6e;">会员中心</p> </a> 
+                </div>                 
+            </div>             
+        </div>         
+        <div class="pagemain register_main" style='padding-top:20px;'> 
+            <section class="m_regcon"> 
+                <form onsubmit="javascript:return check(formUser);" action="user.php?act=act_register" method="post" class='captcha_box' name="formUser"> 
+                    <ul class="form_list"> 
+                        <li>
+                            <input type="text" placeholder="请输入您的手机号" value='' name="mobile_phone" id="mobile_phone" onblur="exisitMoblie(this.value)">
+                        </li>                         
+                        <li class="two_col">
+                            <input type="text" name="mCode" id="mCode" placeholder="请输入短信验证码" style='width:53%'>
+                            <input type="button" id="get_phoneyzm" value="获取短信验证码" style='width:47%' onclick="sendSms()">
+                        </li>                         
+                        <li>
+                            <input type="password" name="password" id="password1" placeholder="请输入密码">
+                        </li>                         
+                        <li>
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="确认密码">
+                        </li>                         
+                        <input name="act" type="hidden" value="act_register" /> 
+                        <input type="hidden" name="back_act" value="" /> 
+                        <li>
+                            <input type="Submit" value="注 册" />
+                        </li>                         
+                    </ul>                     
+                </form>                 
+                <p>温馨提示：成功注册会员，登录后首次完善个人信息，即可获赠官网会员20积分。</p> 
+            </section>             
+        </div>         
+        <div class="new-footer clear"> 
+            <!--div class="new-f-login">
+				<a href='user.php?act=login'>登录</a><span class="new-bar2">|</span><a href='user.php?act=register'>注册</a>
+	    <span class="new-back-top">
+<a href="#">反馈</a><span class="new-bar2">|</span><a href="#top">回到顶部</a></span>
+            </div-->             
+            <div class="new-f-section">
+                <a href="kefu.php">联系我们</a>
+                <a href="company_service.php">企业服务</a>
+            </div>             
+            <!--<div class="ft"><a href="../">电脑版</a><em>|</em><span style="color:red;">触屏版</span><em>|</em><a href="#">客户端</a></div>-->             
+            <div class="new-f-section2">Copyright © 2015-2016  味多美手机商城 版权所有
+                <img src="http://c.cnzz.com/wapstat.php?siteid=1255734072&r=&rnd=925447744" width="0" height="0" />
+            </div>             
+        </div>         
+        <!--style>
+.jisou-info {
+position: absolute;
+background: rgba(0,0,0,0);
+top: 0;
+left: 0;
+width: 0;
+height: 0;
+z-index: 800;
+display: none!important;
+font-size: 20px;
+font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.info-nr {
+position: fixed;
+bottom: 0;
+left: 0px;
+z-index: 900;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+display: block;
+font-size: 20px;
+font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.color-orange .info-nr-menu, .color-orange div {
+background-color: #f60;
+}
+.info-nr-menu:checked {
+-webkit-transform: rotate(135deg);
+}
+.info-nr-menu {
+-webkit-appearance: button;
+display: inline-block;
+width: 36px!important;
+height: 36px!important;
+border-radius: 36px;
+position: absolute;
+bottom: 43px;
+left: 17px;
+z-index: 999;
+-moz-box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+-webkit-box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+background-color: #B70000;
+-webkit-transition: -webkit-transform 200ms;
+-webkit-transform: rotate(1deg);
+color: #fff;
+background-image: url("../images/plus.png");
+background-repeat: no-repeat;
+-webkit-background-size: 60% auto;
+background-size: 60% auto;
+background-position: center center;
+vertical-align: middle;
+text-decoration: none;
+outline: 0;
+font-size: 100%;
+margin: 0;
+padding: 0;
+border: initial;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+letter-spacing: normal;
+word-spacing: normal;
+text-transform: none;
+text-indent: 0px;
+text-shadow: none;
+font: -webkit-small-control;
+text-align: start;
+-webkit-writing-mode: horizontal-tb;
+}
+.info-nr-menu:before {
+font-size: 20px;
+margin: 9px 0 0 9px;
+}
+.info-nr-phone>div {
+width: 32px;
+height: 32px;
+border-radius: 32px;
+-moz-box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+-webkit-box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+background: #B70000;
+position: absolute;
+bottom: 0;
+left: 0;
+margin-bottom: 46px;
+margin-left: 20px;
+z-index: 900;
+-webkit-transition: -webkit-transform 200ms;
+}
+.info-nr-phone>div a {
+display: block;
+height: 32px;
+width: 32px;
+text-decoration: none;
+outline: 0;
+}
+.info-nr-phone>div a:link, .info-nr-phone>div a:hover {
+color: #f00;
+}
+.info-nr-phone>div.on:nth-of-type(1) {
+-webkit-transform: translate(0, -100px) rotate(720deg);
+background-color: #f60;
+}
+.icon-phone {
+background: url(../images/phone.png) no-repeat;
+-webkit-background-size: 65% auto;
+background-size: 70% auto;
+background-position: center center;
+}
+a:-webkit-any-link {
+cursor: auto;
+}
+.info-nr-phone>div.on:nth-of-type(2) {
+-webkit-transform: translate(47px, -81px) rotate(720deg);
+background-color: #f60;
+display: block;
+}
+.icon-location {
+background: url(../images/location.png) no-repeat;
+-webkit-background-size: 65% auto;
+background-size: 70% auto;
+background-position: center center;
+}
+.info-nr-phone>div.on:nth-of-type(3) {
+-webkit-transform: translate(81px, -45px) rotate(720deg);
+background-color: #f60;
+}
+.icon-message {
+background: url(../images/message.png) no-repeat;
+-webkit-background-size: 65% auto;
+background-size: 70% auto;
+background-position: center center;
+}
+.info-nr-phone>div.on:nth-of-type(4) {
+-webkit-transform: translate(100px, 0) rotate(720deg);
+background-color: #f60;
+}
+.icon-share {
+background: url(../images/share.png) no-repeat;
+-webkit-background-size: 65% auto;
+background-size: 70% auto;
+background-position: center center;
+}
+.new-footer{
+margin-bottom: 38px;
+}
+</style>
+<section>
+  <div id="jisou-info" class="jisou-info" style="display: none;"></div>
+  <div class="info-nr">
+    <div id="info-nr-phone" class="info-nr-phone color-orange">
+      <input id="info-nr-btn" type="checkbox" name="" value="" class="info-nr-menu">
+      <div class=""> <a href="tel:4001170170" class="icon-phone"></a> </div>
+      <div class=""> <a href="index.php" class="icon-location"></a> </div>
+      <div class=""> <a href="kefu.php" class="icon-message"></a> </div>
+      <div class=""> <a href="share.php" class="icon-share"></a> </div>
+    </div>
+  </div>
+</section>
+<script>
+        window.addEventListener("DOMContentLoaded", function () {
+            btn = document.getElementById("info-nr-btn");
+            btn.onclick = function () {
+                var divs = document.getElementById("info-nr-phone").querySelectorAll("div");
+                var className = className = this.checked ? "on" : "";
+                for (i = 0; i < divs.length; i++) {
+                    divs[i].className = className;
+                }
+                document.getElementById("jisou-info").style.display = "on" == className ? "block" : "none";
+            }
+        }, false);
+</script-->         
+        <footer class="footermenu" style="height:10%;"> 
+            <ul class="tablist"> 
+                <li class="m1 cur">
+                    <a href="index.php">首页</a>
+                </li>                 
+                <li class="m2">
+                    <a href="category_all.php">分类</a>
+                </li>                 
+                <li class="m3">
+                    <a href="flow.php">购物车</a>
+                </li>                 
+                <li class="m4">
+                    <a href="user.php?act=user_center">我的</a>
+                </li>                 
+            </ul>             
+        </footer>         
+        <script>
+	window.onscroll=function(){
+	//$("header").css({'position':'absolute','top':$(window).scrollTop(),'z-index':9999});
+	//if($(window).scrollTop()<5)
+	//$("header").css("position",'');
+	if($(window).scrollTop()>0)
+	$("header").addClass("fix");
+	if($(window).scrollTop()<5)
+	$("header").removeClass("fix");
+	   //$(".foot").css("top",$(window).scrollTop()+$(window).height());
+	}
+	var uri = "/user.php?act=register&pgid=10&pgedit=1";
+	if(uri.indexOf('?') != -1)
+	{
+		var res = uri.substring(1,uri.indexOf('?'));
+	}else
+	{
+		var res = uri.substr(1);
+	}
+	if(res == 'category.php')  res = 'category_all.php';
+	$.each($(".tablist>li"),function(i,n){
+		if($(n).children().attr('href').indexOf('?') != -1)
+		{
+			var url = $(n).children().attr('href').substring(0,$(n).children().attr('href').indexOf('?'));
+		}else
+		{
+			var url = $(n).children().attr('href').substr(0);
+		}
+		if(url == res)
+		{
+			$(n).attr("class",'m'+ (i+1) + ' cur');
+		}else
+		{
+			$(n).attr("class",'m'+ (i+1));
+		}
+	});
+$(function(){
+	if($(".wdm-to-top").length===0)
+	{
+	    var f="<div class='wdm-to-top' style='display: none; position: fixed; bottom: 59px; right: 0; width: 42px; height: 42px; z-index: 10001'><img style='width: 100%;' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFUAAABUCAYAAADzqXv/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzU1OTUxOTAzMzRBMTFFNEEwMEVEMkNDRjYzQ0NGREMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzU1OTUxOTEzMzRBMTFFNEEwMEVEMkNDRjYzQ0NGREMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozNTU5NTE4RTMzNEExMUU0QTAwRUQyQ0NGNjNDQ0ZEQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozNTU5NTE4RjMzNEExMUU0QTAwRUQyQ0NGNjNDQ0ZEQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrHprYYAAAt+SURBVHja7J19TBNpHsen0zcKLS8ChXat6MqqLOChBDzY6IlveGc2eKh/GF8xWvX0yOrFyLmXrHiXNcvpKho2vgQXIb6AGiXebWCVw4AR9LQgipDDxSryUtDltaXvvd/UGRzr0PLSlwH6SybTl2n7zKff5/cy88wzLGSUZjKZEHsYAwxb4QtCsR74SYq1CW+LfRozvHZ/9BoLcZGRIKKhoaHM2tpaiVAoDONwOJ+y2Wwxk8kUoijqA5v5EGCBWT+sVEajUW0wGN7q9fpX/f39L1Qq1YuCgoJfYNt+EmSTKyBTqcChSsVBothSVVU1FWw+j8eLA5BR8Jb3KJui1el0T9Rq9cOenp6KQ4cOPT5z5ozG0YCplOpwqGRFlpWVBc6ePXuFl5fXlywWa5Yj1QLt+hVUXNzR0VEIf95TeMmILfaG61SoJJjMhoaGSIlEspXL5f7OFS4HXEUjqDc3LS2tEFev3eA6BSoZplwujxGJRFLo3nEIDQzgtvX29uYA2Kv79+9X2QOuw6HiQJkVFRWTo6Ki9nt4eCxCaGgAt7m9vf07sVj8H+zpaHwuFVTUXpEcDJVKpbzu7m7pvHnzbtAVKGaQWXwCPegE+Nwf7t+/H4K9xKCi46roT3T18vLyKbGxsf+Erh6BjCEDgSpBtenBwcE/YaqF50ZX56mY0pmvX79OhK70jR3SIlfky15BQUEZ4Gtjjh49mgHPlaP1taNRKpa0s2Uy2VcCgSDFTqp3qUExUQdp367Fixe3DRWsPX0qumHDBl5NTU0GAN0yHoCauy2LFbZgwYJccGXTR+NnR/Ih5pYtWzyzsrKOQTCaj4xDw0rg+vr6nREREbW4nzU5MqVC16xZ45mbm3t8vAIlge169uzZVqgA66yBHS1UFMo9Tm1tbYanp2ciMgEMwLaXlJRsTExMfDWYjx2NT8W2Y1VXV++eKEDxfFa4aNGirCNHjvgNJ/4whrgNC0rOZSEhIUfHS1AajqlUqtKZM2fugdRRY5nHjkSp5sS+qKgoZMqUKekTEShm0DsTqqqqNmDiGkpGYBMqOGruwoULv4XvEiAT2Pz9/VMfPHjw+VBSLYaN99gKhWKzUCj8C+I2RKvVPpk2bdrGlpYWNeEGhtP9zd3+2rVrkwMDA//kxvnOOBxOJKh1tS03YA0qa9myZanwWZ4b53sLDg7enZ2dHWDNdaKDqRT+kUg+n7/cjfGjNMsnOTl5O65WdDhQWeHh4TsmarS3ZT4+Pn+EqlI8mFpRKpWWlpbOhDTiCze+Qet97ooVK7AUi0kFlkkBmZ2ZmflnqO3D6LADer2ekZeXF3T16tUgcEnet27dmiQQCPRisVjrynZxudxPlUplQUVFhflEojWloikpKQJvb++ldAF69uxZkUwm8+nt7WW1trZyu7q62BcuXBBXVla6NG9GUZSfmpr6B5whYzCo5nPzBw4cSMCOhtMFaH19Pd/yPaPRiOTn54tcDRbSzS+Rd2dPrEJliUSiFXQGSiewPB4voqCgQGzpRslQ0YMHD/p6eXnF0A0otElPdRCDBmDR+Pj4xZYuACVH/XXr1sVTBC+XA929e/dr8nYQeTvoAtbX1zcOZ0YJFfX394+hI1DLSL906dJOuoCF1DMqMjKSS+71HygVNvgN3YHSDSxWxp88eXIW2QUQUNGtW7d6Qe4VMhaA0g3s1KlTP7dUqnlA2ebNmz9D7DQMyBlA6QSWz+d/RqlUoVA4ZawBpQtYqD4lllDNQQp2aPJYBEoHsBwOR0wFlcFms/3GKlBXg2WxWJMQ0kUgA9GfyWQ65WD0uXPngh0B1BbY6upqh5Xe8Fsea9eu9fgopQKoDq/3e3p6sKtQBI4Cag3s3bt3fR25b3PmzOFbdn/siLano6EKBAIDAFTjjx0CdDCwYWFhSkfuW0BAAJdgySIl/85IlJE9e/Y0NTY2ekgkEg0o1ejI38PAhoeHK3U6HSMkJETj6FhB7ObAoF+DwaByBliIlKZZs2b1OyvTcNbB7K6uLq2lTzWB33Hajo5Hk8lkhHsxDVRQ0EXcUEdoJpNJe/nyZSxWmAilmi8z1Gq1nW48I/anncj7C5Dfd39Id9rceEZmGo1Ggbw7+fehUpubm5vGwg7Y8XInu5lKpWpCSJfIE1CNOTk5z8kSppv5+fnpsHVwcLCabm2DyN9IVipRr7Jh4avV6itcLncyHaG+fPmS29DQwIuJien18fEx0KltxcXFu5YvX34PHmJ/uJHoSxhUz/b29r8HBgZOmOHn9or80dHRiVVVVb9i7pWcUmHSNbS2tj50Yxqe9fX11QHQfoQ0SmUg+mMvQq71ALEYwuI266ZQKCqRd1difxD9CaiGw4cPd/T29tbSsfHXr18P2LdvXyi2plO7SkpKynCoJiqlYm/o5HJ5MR2hlpeX+0GBgt67d8+XLm2CVOr5jh075CSlfgCV8Kv69PT0EnC+tEtb5s+f38lms43x8fFddGlTU1PTz5gQLZVKzqSxxxxYvDo6Or4NCAhIcHvMwc1oNGqkUmlydnZ2K55KGaiUOuACysrK8t3YrFtbW1sRAMXSKD1iY3yq2QWsWrXqKQSsx+5ANWhuaszPzy+g6vpUUE04eW1paek5d6CiNiiSft67d68ch/pRCkoFFSOvTUpKetTZ2VnpDlQf+VJ1VlbWObx60lMdL6E65GMe/AsL7/jx42GpqanZDAaD7fai76y+vv5sWFjYj/AQO9KvpVLqYMfRUDwT4D9//nz79OnTN7pxmvPSlzNmzNjS3NzcRYr4Jlvd39K3qleuXJkLXyZ3I0UMxcXF3wNQQqGDzlZhDarZtz59+rTv/Pnz/4DPayYy0cbGxoLk5ORHuC+1Pq+Kje9iEgXBo0ePVs2dO3fvRATa3d39JDw8/CtQaTc87SdDHckkCkY8bVBHR0cXwpf+a6IBVavVrWlpaQdh3/twldqcr8oWVMINYF+mio2NPf727dsHEwWoXq/vzszMPHDq1KkWPDDphzJt3VBGTg+AbWlp6V29enU6VFt1E6C2V0LV9DdQ6f9woDpkiOfwhjocfcAN3Llz521KSkoagH02joGqbty4cXD9+vVVuA/VIsOY/28453uJ+aTN57Pi4uIm3bx58xt/f//Y8QRUp9N15eTkfC2VSrFjHypb0d4eM6iRwfJEIpH3w4cP94nF4qXjASgEpTbwoX+FLt8wFKD2gmoJFhs97CmTyVZFRUVJ4Qc4YxUoBODKnTt3fnflypV2HKjWFlB7QiX7YwwsNtjVEyJk5KZNm7728PAQjSWYwExXU1PzI7izgv7+fiXuQ3VDAeoIqARYFl4g8BISEiZB9bVdIpH8HnHyNVkjMaVS2Xjp0qXvt23b9gSHqcGBDj0oOWKib/w7iMoLUy0vLy9vTlJS0naBQDCTpvmnsr6+/tKSJUuuKhSKPlKE1yPDnPTbYbOnk+40QajWgwdWVFS0BAqG9eASPqFJqqSRy+X/Tk9Pv5Sbm9uO55+a4XR3p0El/QCKq5aFq5YbFBTkefHixYUxMTHJoNwZLkqTel68ePFTRkbGjezsbAUOU0sEI2QUc1A7++YJLJJyMcCc06dPhyUmJi6HFOwLNpvt0NMi0C5DZ2dn9ePHj2/v2rWrvK6urg+HOKDMkarT6VAt4JKVy8YBs4VCIe/EiRMR0dHRvwUlR/H5/KmDTZw13IMfb968qWloaKiGfPO/hYWFnThALb7WkZRpl+FNrrwhDUoBeGANWYMAcsQZoaGh06BCkwDkIC6XGwBqFqAoysWvRjQaDAYNBJk+WKuhS/eBvYb8shns1e3bt385duyYAg82ehygnrSMqpvTCiqFWyCyBWsL8ScwEOqbfJnw4xHEYiAtAwBJ67F166RRpGEMUnVGVrM1oFRgLQEbSe+PzZt82bkdDIvF1iFJy1vS0WJ4/f8FGAAm3gZzhe5uDQAAAABJRU5ErkJggg=='/></div>";
+	    $("body").append(f);
+	}
+    var g=$(".wdm-to-top"),e=$(window).height();
+    $(window).bind("scroll",function(){
+	    var h=document.documentElement.scrollTop||document.body.scrollTop;
+	    if(h>e)
+	    {g.show();}
+	    else
+	    {g.hide();}
+    });
+    g.bind("click",function(){
+        $(this).hide();
+        document.documentElement.scrollTop=0;
+        document.body.scrollTop=0;
+    });
+});
+</script>         
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?af0f084a32588a70ec36eb5bf125f669";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    </body>     
+</html>

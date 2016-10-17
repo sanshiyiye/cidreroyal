@@ -1,23 +1,44 @@
-<div class="clearfix bgNav"></div>
-
-<div class="container-fluid main">
-  <div class="row-fluid">
-    <div class="row-fluid container" style="margin-top:10px; width:98%">
-
-      <div class="row-fluid">
-        <div class="span12" style="text-align:center;">
-          <p id="title" class="span12 lead">{{'BASE.WEB_TITLE' |i18n:'base'}}</p>
-          <form>
-            <div>{{'USER.USERNAME' |i18n:'base'}}<input type="text" ng-model="user.userName"/></div>
-            <div>{{'USER.PASSWORD' |i18n:'base'}}<input type="password" ng-model="user.password"/></div>
-            <div><!-- style="text-align: right"-->
-              <button type="button" ng-click="login();" class="btn btn-success">{{'USER.LOGIN' |i18n:'base'}}</button>
-              <button type="reset" class="btn btn-danger">{{'BASE.RESET_INPUT' |i18n:'base'}}</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
+<div class="pagemain login_phone_main">
+  <section class="m_regcon">
+    <ul class="m_tabs">
+      <li class="active" onclick="change('u')">普通会员登录</li>
+      <li onclick="change('p')">手机动态码登录</li>
+    </ul>
+    <form action="user.php?act=do_login" method="post" id="frm_login">
+      <ul id="use_ucode" class="form_list">
+        <li>
+          <input type="text" name="username" id="username" placeholder="用户名/手机/邮箱">
+        </li>
+        <li>
+          <input type="password" name="pwd" id="pwd" placeholder="输入密码">
+        </li>
+        <li class="m_form_ctrl">
+          <a target="_blank" href="user.php?act=getpwd_page">忘记密码？</a>
+          <input id="saveme" type="checkbox" checked="true">
+          <label for="saveme"> 7天内自动登录</label>
+        </li>
+        <li>
+          <input type="submit" value="登 录">
+        </li>
+        <li class='m_form_ctr2'>
+          <a class='across' href="/user.php?act=register">有帐号？立即注册</a>
+        </li>
+      </ul>
+    </form>
+    <form action="user.php?act=do_login" class='captcha_box' method="post" id="frm_login">
+      <ul id="use_pcode" style="display: none;" class="form_list">
+        <li>
+          <input type="text" name="mobile" id="mobile" placeholder="请输入您的手机号">
+        </li>
+        <li class="two_col">
+          <input name="mCode" id="mCode" type="text" placeholder="请输入短信验证码" style='width:53%'>
+          <input id="get_phoneyzm" type="button" onclick="sendSms()" value="获取短信验证码" style='width:47%'>
+        </li>
+        <li>
+          <input type="submit" value="登 录" />
+        </li>
+      </ul>
+    </form>
+    <p>温馨提示：成功注册会员，登录后首次完善个人信息，即可获赠官网会员20积分。</p>
+  </section>
 </div>
